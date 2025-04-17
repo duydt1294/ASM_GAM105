@@ -4,97 +4,89 @@ using UnityEngine;
 
 public class Hunter : MonoBehaviour
 {
-    public float moveDistance = 2f;      // khoảng cách tối đa di chuyển từ vị trí ban đầu
-    public float moveSpeed = 1f;         // tốc độ di chuyển tuần tra
-    private Vector3 startPosition;       // lưu vị trí ban đầu của Hunter
-    private bool movingRight = true;     // cờ để biết đang đi sang phải hay trái
+    public float khoangCachDiChuyen = 2f;        // Khoảng cách tối đa di chuyển từ vị trí ban đầu
+    public float tocDoDiChuyen = 1f;             // Tốc độ di chuyển tuần tra
+    private Vector3 viTriBatDau;                 // Vị trí ban đầu của Thợ Săn
+    private bool diChuyenSangPhai = true;        // Đang đi sang phải hay không
 
-    public Transform Player;             // Player được gán từ Inspector
-    public float detectionRange = 5f;    // phạm vi phát hiện Player
-    public float attackSpeed = 2f;       // tốc độ đuổi theo Player
-    public float stopDistance = 0.5f;    // khoảng cách để dừng lại khi đã bắt được Player
-
-    //private bool isAttacking = false;    // cờ kiểm tra đang tấn công hay không
-
-    private SpriteRenderer spriteRenderer;
+    public Transform nguoiChoi;                  // Đối tượng Player
+    public float tamPhatHien = 5f;               // Phạm vi phát hiện người chơi
+    public float tocDoTanCong = 2f;              // Tốc độ di chuyển khi tấn công
+    public float khoangDungTanCong = 0.5f;       // Khoảng cách để dừng lại và tấn công
 
     void Start()
     {
-        startPosition = transform.position; // lưu lại vị trí ban đầu
-        spriteRenderer = GetComponent<SpriteRenderer>(); // lấy SpriteRenderer để lật mặt
+        viTriBatDau = transform.position; // Ghi lại vị trí ban đầu
     }
-
     void Update()
     {
-        float distance = Vector2.Distance(transform.position, Player.position);
+        float khoangCach = Vector2.Distance(transform.position, nguoiChoi.position);
 
-        if (distance < detectionRange)
+        if (khoangCach < tamPhatHien)
         {
-            // Phát hiện Player
-          //  isAttacking = true;
-            AttackPlayer();
+            TanCongNguoiChoi(); // Nếu thấy Player thì tấn công
         }
         else
         {
-            // Không thấy Player → tuần tra bình thường
-          //  isAttacking = false;
-            Patrol();
+            TuanTra(); // Nếu không thấy thì tuần tra
         }
     }
-
-    // Di chuyển tuần tra trái - phải khi không tấn công
-    void Patrol()
+    // Di chuyển qua lại khi không phát hiện người chơi
+    void TuanTra()
     {
-        if (movingRight)
+        if (diChuyenSangPhai)
         {
-            transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+            transform.position += Vector3.right * tocDoDiChuyen * Time.deltaTime;
 
-            if (transform.position.x >= startPosition.x + moveDistance)
-                movingRight = false;
+            if (transform.position.x >= viTriBatDau.x + khoangCachDiChuyen)
+                diChuyenSangPhai = false;
 
-            spriteRenderer.flipX = false; // nhìn sang phải
+            transform.rotation = Quaternion.Euler(0, 0, 0); // Quay mặt phải
         }
         else
         {
-            transform.position += Vector3.left * moveSpeed * Time.deltaTime;
+            transform.position += Vector3.left * tocDoDiChuyen * Time.deltaTime;
 
-            if (transform.position.x <= startPosition.x - moveDistance)
-                movingRight = true;
+            if (transform.position.x <= viTriBatDau.x - khoangCachDiChuyen)
+                diChuyenSangPhai = true;
 
-            spriteRenderer.flipX = true; // nhìn sang trái
+            transform.rotation = Quaternion.Euler(0, 180, 0); // Quay mặt trái
         }
     }
-
-    // Di chuyển và lật mặt khi đang đuổi theo Player
-    void AttackPlayer()
+    // Tấn công người chơi
+    void TanCongNguoiChoi()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, Player.position);
+        float khoangCachToiNguoiChoi = Vector2.Distance(transform.position, nguoiChoi.position);
 
-        if (distanceToPlayer > stopDistance)
+        if (khoangCachToiNguoiChoi > khoangDungTanCong)
         {
-            // Nếu còn cách xa Player thì tiếp tục đuổi theo
-            transform.position = Vector2.MoveTowards(transform.position, Player.position, attackSpeed * Time.deltaTime);
+            // Di chuyển lại gần người chơi
+            transform.position = Vector2.MoveTowards(transform.position, nguoiChoi.position, tocDoTanCong * Time.deltaTime);
 
-            // Lật mặt theo hướng Player
-            FlipTowardsPlayer();
+            // Xoay mặt về hướng người chơi
+            XoayMatVePhiaNguoiChoi();
         }
         else
         {
-            // Nếu đã tới gần Player → dừng lại, không xoay mặt nữa
-            // Có thể thêm animation tấn công ở đây
+            // Đã gần → có thể thêm animation tấn công ở đây
         }
     }
-
-    // Lật mặt Hunter theo vị trí Player
-    void FlipTowardsPlayer()
+    // Xoay mặt theo hướng của người chơi
+    void XoayMatVePhiaNguoiChoi()
     {
-        spriteRenderer.flipX = Player.position.x < transform.position.x;
+        if (nguoiChoi.position.x < transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0); // Quay trái
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0); // Quay phải
+        }
     }
-
     private void OnDrawGizmosSelected()
     {
-        // Vẽ vùng phát hiện Player trong Scene View
+        // Vẽ phạm vi phát hiện trong Scene
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, detectionRange);
+        Gizmos.DrawWireSphere(transform.position, tamPhatHien);
     }
 }
