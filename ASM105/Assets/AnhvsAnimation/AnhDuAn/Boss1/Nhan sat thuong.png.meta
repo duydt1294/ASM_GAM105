@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 30
+  spritePixelsToUnits: 33
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edce8c8b5bf624c4db1f6aea0e27c40a
-      internalID: -2074836862
+      spriteID: 73e2259205a60924fa8df1d57f0971d0
+      internalID: -167898297
       vertices: []
       indices: 
       edges: []
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b50f5a14f934e24cb7feedb083f16a1
-      internalID: -480459672
+      spriteID: 97a6686190730334c8bb55fdd4485bdb
+      internalID: -360451779
       vertices: []
       indices: 
       edges: []
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 448afbe1253687e42a66998219ec51fb
-      internalID: 2028765517
+      spriteID: 42b6c0d9b5cc5ee4e80dae63a8b92488
+      internalID: 696910307
       vertices: []
       indices: 
       edges: []
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e3e4eda9eaaadd4fb7bd4138eae637e
-      internalID: -1572130618
+      spriteID: 33396039a235b2348aeba6264e8bc196
+      internalID: 828133401
       vertices: []
       indices: 
       edges: []
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fda06cf198c4b340ba6b77c3ef00ba9
-      internalID: 1370057216
+      spriteID: dad332a707155a346a0eae2927306176
+      internalID: -783754987
       vertices: []
       indices: 
       edges: []
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9a03f3950157ca498691f0ef756ce81
-      internalID: 473710341
+      spriteID: 62d7c3fbdff3b6c42860d54e1cfbbd26
+      internalID: -2139655888
       vertices: []
       indices: 
       edges: []
@@ -246,17 +246,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Nhan sat thuong_0: -2074836862
-      Nhan sat thuong_1: -480459672
-      Nhan sat thuong_10: 52350719
-      Nhan sat thuong_2: 1424358940
-      Nhan sat thuong_3: 2028765517
-      Nhan sat thuong_4: 341059439
-      Nhan sat thuong_5: -1572130618
-      Nhan sat thuong_6: -597551236
-      Nhan sat thuong_7: 1370057216
-      Nhan sat thuong_8: 473710341
-      Nhan sat thuong_9: 1371003314
+      Nhan sat thuong_0: -167898297
+      Nhan sat thuong_1: -360451779
+      Nhan sat thuong_10: -2118735084
+      Nhan sat thuong_2: 1694727388
+      Nhan sat thuong_3: 696910307
+      Nhan sat thuong_4: 241555642
+      Nhan sat thuong_5: 828133401
+      Nhan sat thuong_6: -1425963983
+      Nhan sat thuong_7: -783754987
+      Nhan sat thuong_8: -2139655888
+      Nhan sat thuong_9: -1628366163
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
