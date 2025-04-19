@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\assets\\boss\\skill1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\boss\\skill1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\fpt\\hk2\\gam105\\asm\\asm105\\assets\\quai4_hiep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\quai4_hiep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\fpt\\hk2\\gam105\\asm\\asm105\\assets\\boss\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\boss\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\fpt\\hk2\\gam105\\asm\\asm105\\assets\\quai4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\quai4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\assets\\boss\\shadowcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\boss\\shadowcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\assets\\enemyattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\enemyattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\assets\\main\\mainmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\main\\mainmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\assets\\boss\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\boss\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\assets\\monster\\monstermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\monster\\monstermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,68 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainMoveMent.cs",
-              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Main\\MainMoveMent.cs",
-              "RelativeDocumentMoniker": "Assets\\Main\\MainMoveMent.cs",
-              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Main\\MainMoveMent.cs",
-              "RelativeToolTip": "Assets\\Main\\MainMoveMent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Quai4_Hiep.cs",
+              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Quai4_Hiep.cs",
+              "RelativeDocumentMoniker": "Assets\\Quai4_Hiep.cs",
+              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Quai4_Hiep.cs",
+              "RelativeToolTip": "Assets\\Quai4_Hiep.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAcwCQAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:27:16.579Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Boss\\PlayerMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Boss\\PlayerMovement.cs",
-              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Boss\\PlayerMovement.cs",
-              "RelativeToolTip": "Assets\\Boss\\PlayerMovement.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBgAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:21:47.034Z",
+              "WhenOpened": "2025-04-19T12:25:33.604Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlayerHealth.cs",
-              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Boss\\PlayerHealth.cs",
-              "RelativeDocumentMoniker": "Assets\\Boss\\PlayerHealth.cs",
-              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Boss\\PlayerHealth.cs",
-              "RelativeToolTip": "Assets\\Boss\\PlayerHealth.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Quai4.cs",
+              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Quai4.cs",
+              "RelativeDocumentMoniker": "Assets\\Quai4.cs",
+              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Quai4.cs",
+              "RelativeToolTip": "Assets\\Quai4.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAUwFAAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:16:36.593Z"
+              "WhenOpened": "2025-04-19T12:18:29.944Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ShadowCollision.cs",
-              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Boss\\ShadowCollision.cs",
-              "RelativeDocumentMoniker": "Assets\\Boss\\ShadowCollision.cs",
-              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Boss\\ShadowCollision.cs",
-              "RelativeToolTip": "Assets\\Boss\\ShadowCollision.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAcwAoAAAAFAAAAAAAAAA==",
+              "Title": "EnemyAttack.cs",
+              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\EnemyAttack.cs",
+              "RelativeDocumentMoniker": "Assets\\EnemyAttack.cs",
+              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\EnemyAttack.cs",
+              "RelativeToolTip": "Assets\\EnemyAttack.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAUwDcAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:08:55.529Z"
+              "WhenOpened": "2025-04-19T10:58:39.835Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Skill1.cs",
-              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Boss\\Skill1.cs",
-              "RelativeDocumentMoniker": "Assets\\Boss\\Skill1.cs",
-              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Boss\\Skill1.cs",
-              "RelativeToolTip": "Assets\\Boss\\Skill1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAA2AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "MonsterMove.cs",
+              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Monster\\MonsterMove.cs",
+              "RelativeDocumentMoniker": "Assets\\Monster\\MonsterMove.cs",
+              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Monster\\MonsterMove.cs",
+              "RelativeToolTip": "Assets\\Monster\\MonsterMove.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAYwF0AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T10:43:05.332Z",
+              "WhenOpened": "2025-04-18T08:21:42.863Z",
               "EditorCaption": ""
             }
           ]

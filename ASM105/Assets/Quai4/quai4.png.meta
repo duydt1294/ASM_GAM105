@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ab26736c7f01f274e949331a797fff1a
+guid: 68b25d84e206d0f44b5cc62524bf2b6a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 60
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "nhansatthuongQuai4\u0110\xE3Cat_0"
+      name: quai4_0
       rect:
         serializedVersion: 2
-        x: 767
-        y: 1502
-        width: 720
-        height: 706
+        x: 339
+        y: 358
+        width: 129
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a13f458ed951e8e4287ebf86706ad083
-      internalID: -397141494
+      spriteID: ba4b78339a1c4ea46b86cc340365be39
+      internalID: -769272024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "nhansatthuongQuai4\u0110\xE3Cat_1"
+      name: quai4_1
       rect:
         serializedVersion: 2
-        x: 1684
-        y: 1500
-        width: 750
-        height: 699
+        x: 154
+        y: 359
+        width: 129
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa1b00a7e92cf5f409feda2121294382
-      internalID: -618874882
+      spriteID: c2176b088a52e454b84b30bc412ed45f
+      internalID: -468311465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "nhansatthuongQuai4\u0110\xE3Cat_2"
+      name: quai4_2
       rect:
         serializedVersion: 2
-        x: 2465
-        y: 2069
-        width: 31
-        height: 31
+        x: 6
+        y: 360
+        width: 129
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae27617c03386304283f4fcf503a933a
-      internalID: 506127885
+      spriteID: ea34daf51de5feb4ea1a9aff2229361e
+      internalID: -1857336237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "nhansatthuongQuai4\u0110\xE3Cat_3"
+      name: quai4_3
       rect:
         serializedVersion: 2
-        x: 2434
-        y: 1963
-        width: 27
-        height: 27
+        x: 22
+        y: 227
+        width: 121
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55e062af7173a4e42a9ad168b984eb67
-      internalID: 1585381927
+      spriteID: 8330ab7b973128a4c943f0e265176c67
+      internalID: -400114773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quai4_4
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 226
+        width: 121
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f178b16bb3ea98045aa84dc463cb3f58
+      internalID: 722477439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quai4_5
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 227
+        width: 121
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19775d985d1745346b5279cdfecf137f
+      internalID: 659876777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quai4_6
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 112
+        width: 121
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 663dee4faddf005409bf2f2a78310f42
+      internalID: 323947747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quai4_7
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 112
+        width: 121
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 875e25dbdfa66c04db94f455ba2f4577
+      internalID: -561712057
       vertices: []
       indices: 
       edges: []
@@ -204,10 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "nhansatthuongQuai4\u0110\xE3Cat_0": -397141494
-      "nhansatthuongQuai4\u0110\xE3Cat_1": -618874882
-      "nhansatthuongQuai4\u0110\xE3Cat_2": 506127885
-      "nhansatthuongQuai4\u0110\xE3Cat_3": 1585381927
+      quai4_0: -769272024
+      quai4_1: -468311465
+      quai4_2: -1857336237
+      quai4_3: -400114773
+      quai4_4: 722477439
+      quai4_5: 659876777
+      quai4_6: 323947747
+      quai4_7: -561712057
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

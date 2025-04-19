@@ -30,10 +30,10 @@ public class KeThuAttack : MonoBehaviour
             // Kiểm tra nếu kẻ thù ở trong phạm vi tấn công và có đủ thời gian cooldown
             if (distance <= attackRange && Time.time >= lastAttackTime + attackCooldown && !isAttacking)
             {
-                isAttacking = true; // Đặt trạng thái tấn công
-                animator.SetTrigger("Attack"); // Kích hoạt animation tấn công
-                lastAttackTime = Time.time; // Ghi lại thời gian tấn công
-                StartCoroutine(AttackDelay()); // Gọi Coroutine để reset lại trạng thái tấn công sau một thời gian
+                isAttacking = true;
+                animator.SetBool("isAttacking", true); // Bật trạng thái tấn công
+                lastAttackTime = Time.time;
+                StartCoroutine(AttackDelay());
             }
         }
     }
@@ -41,8 +41,9 @@ public class KeThuAttack : MonoBehaviour
     // Coroutine để reset trạng thái tấn công sau khi animation kết thúc
     private IEnumerator AttackDelay()
     {
-        yield return new WaitForSeconds(0.8f); // Thời gian animation tấn công (có thể thay đổi)
-        isAttacking = false; // Reset lại trạng thái tấn công
+        yield return new WaitForSeconds(0.8f); // Thời gian animation tấn công
+        isAttacking = false;
+        animator.SetBool("isAttacking", false); // Tắt trạng thái tấn công
     }
 
     // Hàm tấn công khi animation tấn công kết thúc
