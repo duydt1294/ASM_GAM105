@@ -5,7 +5,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Di chuyển")]
     [SerializeField] private float moveSpeed = 5f; // Tốc độ di chuyển
     [SerializeField] private float jumpForce = 12f; // Lực nhảy
-    [SerializeField] private float wallSlideSpeed = 1f; // Tốc độ trượt tường
 
     [Header("Kiểm tra va chạm")]
     [SerializeField] private LayerMask groundLayer; // Layer cho mặt đất
@@ -29,18 +28,38 @@ public class PlayerMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>(); // Lấy SpriteRenderer
     }
 
+    void UpdateAnimations()
+    {
+        if (isWallSliding)
+        {
+            animator.Play("WallSlide"); // Gọi animation bám tường
+        }
+        else if (rb.velocity.y != 0) // Kiểm tra nếu đang nhảy
+        {
+            animator.Play("Jump"); // Gọi animation nhảy
+        }
+        else if (Mathf.Abs(horizontal) == 0)
+        {
+            animator.Play("Idle"); // Gọi animation đứng im
+        }
+        else
+        {
+            animator.Play("Run"); // Gọi animation chạy
+        }
+    }
+
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal"); // Lấy giá trị di chuyển ngang
 
-        // Kiểm tra bám tường
-        if (isTouchingWall && !isGrounded && Mathf.Abs(horizontal) > 0)
+        // Kiểm tra bám tường chỉ khi nhân vật chạm vào tường và không đứng trên mặt đất
+        if (isTouchingWall && !isGrounded && rb.velocity.y <= 0)
         {
-            isWallSliding = true; // Bắt đầu bám tường
+            isWallSliding = true; // Bắt đầu bám tường ngay lập tức khi chạm vào tường
         }
         else
         {
-            isWallSliding = false; // Ngừng bám tường
+            isWallSliding = false; // Ngừng bám tường khi không còn chạm tường
         }
 
         // Nhảy khi chạm bất kỳ collider nào
@@ -66,34 +85,18 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
         }
 
-        // Bám tường, giảm tốc độ di chuyển khi bám tường
+        // Bám tường, chỉ cho phép di chuyển ngang và không vặn bị rơi
         if (isWallSliding)
         {
-            rb.velocity = new Vector2(rb.velocity.x, -wallSlideSpeed); // Giảm tốc độ khi bám tường
-        }
-    }
-
-    void UpdateAnimations()
-    {
-        if (isWallSliding)
-        {
-            animator.Play("WallSlide"); // Gọi animation bám tường
-        }
-        else if (rb.velocity.y != 0) // Kiểm tra nếu đang nhảy
-        {
-            animator.Play("Jump"); // Gọi animation nhảy
-        }
-        else if (Mathf.Abs(horizontal) == 0)
-        {
-            animator.Play("Idle"); // Gọi animation đứng im
+            rb.velocity = new Vector2(horizontal * moveSpeed, 0); // Giữ vận tốc y bằng 0 khi bám tường
+            rb.gravityScale = 0; // Tắt trọng lực khi bám tường
         }
         else
         {
-            animator.Play("Run"); // Gọi animation chạy
+            rb.gravityScale = 1; // Khôi phục trọng lực khi không bám tường
         }
     }
 
-    // Kiểm tra va chạm với các collider
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Chạm vào bất kỳ collider nào cho phép nhảy
@@ -103,7 +106,6 @@ public class PlayerMovement : MonoBehaviour
         if (((1 << collision.gameObject.layer) & wallLayer) != 0)
         {
             isTouchingWall = true; // Đánh dấu chạm tường
-            wallDirection = collision.contacts[0].normal.x > 0 ? 1 : -1; // Xác định hướng bám tường
         }
     }
 
