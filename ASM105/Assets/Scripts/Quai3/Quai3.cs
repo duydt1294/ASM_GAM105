@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Quai2 : MonoBehaviour
+public class Quai3 : MonoBehaviour
 {
     public float speed = 2f;
     public float patrolRange = 2f;
@@ -10,11 +10,15 @@ public class Quai2 : MonoBehaviour
     private Vector3 startPos;
     private bool goingForward = true;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
+    private bool isTouchingPlayer = false;
+    private bool isAttacking = false;
 
     void Start()
     {
         startPos = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
 
         if (player == null)
         {
@@ -28,6 +32,8 @@ public class Quai2 : MonoBehaviour
 
     void Update()
     {
+        if (isAttacking) return; // ❌ Không di chuyển khi đang attack
+
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
         if (distanceToPlayer <= chaseRange)
@@ -39,7 +45,6 @@ public class Quai2 : MonoBehaviour
             Vector3 direction = (targetPos - transform.position).normalized;
             transform.position += direction * speed * Time.deltaTime;
 
-            // Flip sprite nếu đủ xa để tránh bị lật liên tục
             if (Mathf.Abs(targetPos.x - transform.position.x) > 0.1f)
             {
                 spriteRenderer.flipX = (targetPos.x < transform.position.x);
@@ -66,6 +71,34 @@ public class Quai2 : MonoBehaviour
                 {
                     goingForward = true;
                 }
+            }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("player"))
+        {
+            isTouchingPlayer = true;
+            isAttacking = true;
+
+            if (animator != null)
+            {
+                animator.SetBool("IsAttacking", true);
+            }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("player"))
+        {
+            isTouchingPlayer = false;
+            isAttacking = false;
+
+            if (animator != null)
+            {
+                animator.SetBool("IsAttacking", false);
             }
         }
     }
