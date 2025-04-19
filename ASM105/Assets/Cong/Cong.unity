@@ -895,13 +895,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpForce: 10
-  wallSlideSpeed: 1
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   wallLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
 --- !u!114 &2003978702
 MonoBehaviour:
   m_ObjectHideFlags: 0
