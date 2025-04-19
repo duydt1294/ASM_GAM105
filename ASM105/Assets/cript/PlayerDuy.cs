@@ -63,7 +63,7 @@ public class PlayerDuy : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumps)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+            rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             jumpCount++;
             OnGround = false;
@@ -76,12 +76,7 @@ public class PlayerDuy : MonoBehaviour
         animator.SetBool("Jump", !OnGround);
     }
 
-    private void FixedUpdate()
-    {
-        movement = new Vector2(moveX * MoveSpeed, rb.linearVelocity.y);
-        rb.linearVelocity = movement;
-    }
-
+    
     void flip()
     {
         lat_mat = !lat_mat;
