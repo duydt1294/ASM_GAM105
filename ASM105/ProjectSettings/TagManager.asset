@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Portal
+  - Portal2
+  - Dat
+  - UIHangDong
+  - UIBoss
+  - Lava
   layers:
   - Default
   - TransparentFX
