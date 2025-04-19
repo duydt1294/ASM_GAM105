@@ -8,7 +8,7 @@ public class Boss2 : MonoBehaviour
 {
     public int mauToiDa = 100;
     private int mauHienTai;
-    Animator heo, heochet, dichuyen, tancong;
+    Animator heo, heochet, dichuyen, tancong, chieuu1;
     [SerializeField] Slider hp;
     [SerializeField] private Camera mayAnh; // Camera chính (Kéo thả trong Inspector)
     [SerializeField] private Transform nguoiChoi; // Người chơi (Kéo thả trong Inspector)
@@ -30,6 +30,7 @@ public class Boss2 : MonoBehaviour
         heochet = GetComponent<Animator>();
         dichuyen = GetComponent<Animator>();
         tancong = GetComponent<Animator>();
+        chieuu1 = GetComponent<Animator>();
         viTriBanDau = transform.position;
     }
 
@@ -156,7 +157,7 @@ public class Boss2 : MonoBehaviour
                 }
                 // Kết thúc animation tấn công
                 tancong.SetBool("tancong", false);
-                yield return new WaitForSeconds(8f);
+                yield return new WaitForSeconds(5f);
                 TanCongBoss = false;
             }
         }
@@ -167,12 +168,15 @@ public class Boss2 : MonoBehaviour
 
         while (mauHienTai > 0) // Boss còn sống mới bắn
         {
+            chieuu1.SetBool("chieu1", true);
+            yield return new WaitForSeconds(0.5f);
+            chieuu1.SetBool("chieu1", false);
             // Hướng bắn từ Boss tới người chơi
             Vector2 huongBan = (nguoiChoi.position - transform.position).normalized;
 
             // Tạo viên đạn cách Boss một chút theo hướng bắn
             Vector3 viTriSpawn = transform.position + (Vector3)huongBan * 1f; // 1f là khoảng cách đẩy ra
-
+            
             GameObject dan = Instantiate(Chieu1, viTriSpawn, Quaternion.identity);
             Rigidbody2D rb = dan.GetComponent<Rigidbody2D>();
 
