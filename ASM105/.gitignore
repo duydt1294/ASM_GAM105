@@ -17,3 +17,4 @@ Packages/com.unity.package-manager/ProjectCache/
 *.vspx
 *.unityproj
 *.tmproj
+*.vsidx
