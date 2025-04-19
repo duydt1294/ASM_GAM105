@@ -24,11 +24,16 @@ public class Player : MonoBehaviour
 
     private int jumpCount = 0; // Số lần đã nhảy
     private int maxJumps = 2; // Tối đa 2 lần
+    //âm thanh
+    private AudioSource audioSource;
+    public AudioClip jumpSound;
+    public AudioClip shootSound;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
         OnGround = true;
         jumpCount = 0;
     }
@@ -48,33 +53,35 @@ public class Player : MonoBehaviour
         {
             animator.SetBool("Attack", true);
             Shoot();
+            if (shootSound != null)
+                audioSource.PlayOneShot(shootSound);
         }
         else
         {
             animator.SetBool("Attack", false);
         }
-
+        // --------- Xử lý Double Jump ---------
         moveX = Input.GetAxisRaw("Horizontal");
 
-        // --------- Xử lý Double Jump ---------
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumps)
         {
-            rb.velocity = new Vector2(rb.velocity.x, 0); // Reset tốc độ trục Y trước khi nhảy
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
             rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             jumpCount++;
             OnGround = false;
+
+            if (jumpSound != null)
+                audioSource.PlayOneShot(jumpSound);
         }
 
-        if (!OnGround)
-        {
-            //animator.Play("Jump");
-        }
+        animator.SetFloat("Speed", Mathf.Abs(moveX));
+        animator.SetBool("Jump", !OnGround);
     }
 
     private void FixedUpdate()
     {
-        movement = new Vector2(moveX * MoveSpeed, rb.velocity.y);
-        rb.velocity = movement;
+        movement = new Vector2(moveX * MoveSpeed, rb.linearVelocity.y);
+        rb.linearVelocity = movement;
     }
 
     void flip()
