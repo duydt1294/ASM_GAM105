@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\AAAA PC\\DuAn ASM1\\ASM105\\assets\\code\\boss2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\boss2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\AAAA PC\\DuAn ASM1\\ASM105\\assets\\chieu1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\chieu1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\AAAA PC\\DuAn ASM1\\ASM105\\assets\\code\\quai1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\quai1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\AAAA PC\\DuAn ASM1\\ASM105\\assets\\code\\boss2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\boss2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\AAAA PC\\DuAn ASM1\\ASM105\\assets\\code\\boss1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +21,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\AAAA PC\\DuAn ASM1\\ASM105\\assets\\code\\quai3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\quai3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\AAAA PC\\DuAn ASM1\\ASM105\\assets\\code\\quai1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\quai1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "quai1.cs",
               "DocumentMoniker": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\quai1.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\quai1.cs",
               "ToolTip": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\quai1.cs",
               "RelativeToolTip": "Assets\\Code\\quai1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T10:13:27.862Z",
               "IsPinned": true
@@ -48,12 +52,24 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Chieu1.cs",
+              "DocumentMoniker": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Chieu1.cs",
+              "RelativeDocumentMoniker": "Assets\\Chieu1.cs",
+              "ToolTip": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Chieu1.cs",
+              "RelativeToolTip": "Assets\\Chieu1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T13:10:32.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Boss2.cs",
               "DocumentMoniker": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\Boss2.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Boss2.cs",
               "ToolTip": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\Boss2.cs",
               "RelativeToolTip": "Assets\\Code\\Boss2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAqwL0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T15:24:56.114Z"
             },
@@ -65,7 +81,7 @@
               "RelativeDocumentMoniker": "Assets\\Code\\Boss1.cs",
               "ToolTip": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\Boss1.cs",
               "RelativeToolTip": "Assets\\Code\\Boss1.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwCIAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T19:01:55.901Z"
             },
@@ -77,7 +93,7 @@
               "RelativeDocumentMoniker": "Assets\\Code\\Quai3.cs",
               "ToolTip": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\Quai3.cs",
               "RelativeToolTip": "Assets\\Code\\Quai3.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCEAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAuwIIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T11:00:03.771Z"
             },
@@ -89,7 +105,7 @@
               "RelativeDocumentMoniker": "Assets\\Code\\Player.cs",
               "ToolTip": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\Player.cs",
               "RelativeToolTip": "Assets\\Code\\Player.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAAAI4AAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAwwIcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T00:05:50.418Z",
               "EditorCaption": ""

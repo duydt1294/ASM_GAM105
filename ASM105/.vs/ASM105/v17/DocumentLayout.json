@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\aaaa pc\\duan asm1\\asm105\\assets\\code\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\AAAA PC\\DuAn ASM1\\ASM105\\assets\\code\\quai3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\quai3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\AAAA PC\\DuAn ASM1\\ASM105\\assets\\code\\boss2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\boss2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,16 +19,12 @@
       "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\boss1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\aaaa pc\\duan asm1\\asm105\\assets\\code\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\AAAA PC\\DuAn ASM1\\ASM105\\assets\\code\\quai1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\quai1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\AAAA PC\\DuAn ASM1\\ASM105\\assets\\code\\quai3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\quai3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AAAA PC\\DuAn ASM1\\ASM105\\assets\\chieu1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\chieu1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,68 +34,79 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "quai1.cs",
               "DocumentMoniker": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\quai1.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\quai1.cs",
               "ToolTip": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\quai1.cs",
               "RelativeToolTip": "Assets\\Code\\quai1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T10:13:27.862Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "Chieu1.cs",
+              "DocumentMoniker": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Chieu1.cs",
+              "RelativeDocumentMoniker": "Assets\\Chieu1.cs",
+              "ToolTip": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Chieu1.cs",
+              "RelativeToolTip": "Assets\\Chieu1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T13:10:32.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Boss2.cs",
               "DocumentMoniker": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\Boss2.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Boss2.cs",
               "ToolTip": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\Boss2.cs",
               "RelativeToolTip": "Assets\\Code\\Boss2.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAmwHcAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAqwL0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T15:24:56.114Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T15:24:56.114Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Boss1.cs",
               "DocumentMoniker": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\Boss1.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Boss1.cs",
               "ToolTip": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\Boss1.cs",
               "RelativeToolTip": "Assets\\Code\\Boss1.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCgAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T19:01:55.901Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T19:01:55.901Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Quai3.cs",
               "DocumentMoniker": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\Quai3.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Quai3.cs",
               "ToolTip": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\Quai3.cs",
               "RelativeToolTip": "Assets\\Code\\Quai3.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCEAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAmwHQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T11:00:03.771Z"
+              "WhenOpened": "2025-04-17T11:00:03.771Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Player.cs",
               "ToolTip": "D:\\AAAA PC\\DuAn ASM1\\ASM105\\Assets\\Code\\Player.cs",
               "RelativeToolTip": "Assets\\Code\\Player.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAIBJwI4AAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAowIEAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T00:05:50.418Z",
               "EditorCaption": ""

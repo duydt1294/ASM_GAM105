@@ -7,7 +7,8 @@ TagManager:
   - hitbox
   - Enemy
   - matdat
-  - chieu2
+  - chieu1Boss2
+  - chieu2Boss2
   layers:
   - Default
   - TransparentFX

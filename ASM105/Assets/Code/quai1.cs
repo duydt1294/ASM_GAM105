@@ -32,7 +32,7 @@ public class quai1 : MonoBehaviour
         if(mauhientai <= 0)
         {
             chet.SetTrigger("Dead");
-            Destroy(gameObject,1f);
+            Destroy(gameObject,1.5f);
         }
     }
     IEnumerator chayAnimation() // Tạo hàm này để làm Animation khi quái bị nhận sát thương

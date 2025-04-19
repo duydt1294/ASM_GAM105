@@ -275,7 +275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.04, y: 0.92}
+  m_AnchoredPosition: {x: -0.04, y: 1.35}
   m_SizeDelta: {x: 229.9977, y: 60.7495}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1163763475342833180
@@ -377,6 +377,83 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &8857711787233389469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1761456135339961537}
+  - component: {fileID: 6872561284150426785}
+  m_Layer: 0
+  m_Name: TanCong
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1761456135339961537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8857711787233389469}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.654527, y: 3.6468198, z: 0.10456272}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4252432277067532728}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &6872561284150426785
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8857711787233389469}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 4.714569, y: -3.6366327}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.3461766, y: 2.1833549}
+  m_EdgeRadius: 0
 --- !u!1 &9199615574442231725
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,9 +466,9 @@ GameObject:
   - component: {fileID: 666543768540044844}
   - component: {fileID: 131871860007043209}
   - component: {fileID: 184132768591966340}
-  - component: {fileID: 2457191038469111225}
+  - component: {fileID: 4148269701785146947}
   m_Layer: 0
-  m_Name: Quai3_H0angANh
+  m_Name: Quai3_H0angAnh
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -406,10 +483,11 @@ Transform:
   m_GameObject: {fileID: 9199615574442231725}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.07, y: -3.47, z: 0}
+  m_LocalPosition: {x: -6.19, y: -3.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1761456135339961537}
   - {fileID: 9072336920547755244}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -501,8 +579,12 @@ MonoBehaviour:
   mautoida: 100
   mauhientai: 100
   hpQuai: {fileID: 1072141460639416775}
---- !u!60 &2457191038469111225
-PolygonCollider2D:
+  speed: 2
+  patrolRange: 2
+  chaseRange: 3
+  player: {fileID: 0}
+--- !u!61 &4148269701785146947
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -533,29 +615,16 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.025253534, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.2, y: 1.5}
+    oldSize: {x: 1.8461539, y: 2.3076923}
     newSize: {x: 1.2, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.2713165, y: 0.69894767}
-      - {x: -0.39579034, y: 0.4851321}
-      - {x: -0.5740693, y: 0.25599098}
-      - {x: -0.56238645, y: -0.19172573}
-      - {x: -0.29511756, y: -0.23922849}
-      - {x: -0.45960587, y: -0.762763}
-      - {x: 0.57447386, y: -0.762763}
-      - {x: 0.45826805, y: -0.21523333}
-      - {x: 0.5872369, y: -0.19389343}
-      - {x: 0.5733696, y: -0.0019874573}
-      - {x: 0.5274203, y: 0.3780265}
-      - {x: 0.344738, y: 0.42131674}
-      - {x: 0.19684276, y: 0.6989474}
-  m_UseDelaunayMesh: 0
+  serializedVersion: 2
+  m_Size: {x: 2.881555, y: 2.3076923}
+  m_EdgeRadius: 0

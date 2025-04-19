@@ -16,6 +16,10 @@ public class Boss2 : MonoBehaviour
     public float tocDoDiChuyen = 2f; // Tốc độ di chuyển của Boss
     private bool latMat = true;
     public bool TanCongBoss = false;
+    //Cường
+    [SerializeField] GameObject Chieu1; // Chiêu 1 (Kéo vào từ Inspector)
+    [SerializeField] float tocDoChieu1 = 20f; // Tốc độ bay của chiêu 1
+    private bool dangBanChieu1 = false;
 
     void Start()
     {
@@ -59,6 +63,7 @@ public class Boss2 : MonoBehaviour
             heochet.SetTrigger("chet");
             Destroy(gameObject, 2f);
         }
+
     }
 
     IEnumerator ChayAnimation()
@@ -97,11 +102,14 @@ public class Boss2 : MonoBehaviour
         {
             Flip();
         }
-        if (mauHienTai <= 100 && !TanCongBoss)
+        if (mauHienTai <= 50 && !TanCongBoss)
         {
             StartCoroutine(TanCong());
         }
-
+        if (mauHienTai <= 100 && !dangBanChieu1)
+        {
+            StartCoroutine(BanChieu1());
+        }
     }
 
     private void QuayLaiViTriBanDau()
@@ -119,17 +127,11 @@ public class Boss2 : MonoBehaviour
     }
     IEnumerator TanCong() // chiêu 2 là nuốt thằng Player vào bụng 
     {
-        while (mauHienTai <= 100)
+        while (mauHienTai <= 50)
         {
-            //TanCongBoss = true;
-            //tancong.SetBool("tancong", true);
-            //yield return new WaitForSeconds(0.5f);
-            //tancong.SetBool("tancong", false);
-            //yield return new WaitForSeconds(3f);
-            //TanCongBoss = false;
             float tocDoLuot = 10f; // tốc độ lướt
 
-            while (mauHienTai <= 100)
+            while (mauHienTai <= 50)
             {
                 TanCongBoss = true;
                 tancong.SetBool("tancong", true);
@@ -154,9 +156,37 @@ public class Boss2 : MonoBehaviour
                 }
                 // Kết thúc animation tấn công
                 tancong.SetBool("tancong", false);
-                yield return new WaitForSeconds(3f);
+                yield return new WaitForSeconds(8f);
                 TanCongBoss = false;
             }
         }
     }
+    IEnumerator BanChieu1()
+    {
+        dangBanChieu1 = true;
+
+        while (mauHienTai > 0) // Boss còn sống mới bắn
+        {
+            // Hướng bắn từ Boss tới người chơi
+            Vector2 huongBan = (nguoiChoi.position - transform.position).normalized;
+
+            // Tạo viên đạn cách Boss một chút theo hướng bắn
+            Vector3 viTriSpawn = transform.position + (Vector3)huongBan * 1f; // 1f là khoảng cách đẩy ra
+
+            GameObject dan = Instantiate(Chieu1, viTriSpawn, Quaternion.identity);
+            Rigidbody2D rb = dan.GetComponent<Rigidbody2D>();
+
+            if (rb != null)
+            {
+                rb.velocity = huongBan * tocDoChieu1;
+            }
+
+            Destroy(dan, 4f); // Viên đạn tự hủy sau 4 giây
+            yield return new WaitForSeconds(4f); // Chờ 4 giây trước khi bắn viên tiếp theo
+        }
+
+        dangBanChieu1 = false;
+    }
+
+
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 335a8abcbeac4dc4195c86d15bf04bb2
+guid: 9d661a107a04e544ca97b1e0afd9fcd3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 13
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chet_0
+      name: Skill1Boss2-Photoroom_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 16
-        width: 16
-        height: 28
+        x: 51
+        y: 544
+        width: 420
+        height: 424
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c341b14dd4985e47b0aa2dfa9778cbe
-      internalID: 1101809129
+      spriteID: 4ae64e17bcdca164c9ae5f8f6ec30979
+      internalID: 724584613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chet_1
+      name: Skill1Boss2-Photoroom_1
       rect:
         serializedVersion: 2
-        x: 88
-        y: 16
-        width: 15
-        height: 28
+        x: 553
+        y: 556
+        width: 414
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cba75360c0441a4d83f6cfbf23dadc3
-      internalID: -723600017
+      spriteID: a74c9fee8cb974844b275d19e56989c1
+      internalID: 401269264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chet_2
+      name: Skill1Boss2-Photoroom_2
       rect:
         serializedVersion: 2
-        x: 149
-        y: 16
-        width: 16
-        height: 26
+        x: 51
+        y: 72
+        width: 422
+        height: 401
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 738282561d72fcd4690871c543a1715e
-      internalID: 1524339520
+      spriteID: e8f10f885c21ea142b641657aafb87a3
+      internalID: -343377909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chet_3
+      name: Skill1Boss2-Photoroom_3
       rect:
         serializedVersion: 2
-        x: 211
-        y: 16
-        width: 18
-        height: 21
+        x: 550
+        y: 75
+        width: 401
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,71 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8e07f5809548c04782a0203d83d8887
-      internalID: 1681605641
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chet_4
-      rect:
-        serializedVersion: 2
-        x: 275
-        y: 16
-        width: 18
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a20e5cc6d40b5194896a0f49e8409572
-      internalID: -940998543
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chet_5
-      rect:
-        serializedVersion: 2
-        x: 333
-        y: 16
-        width: 24
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b2d17014bf4d464fa992c26ff5d5957
-      internalID: 1747088012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chet_6
-      rect:
-        serializedVersion: 2
-        x: 390
-        y: 16
-        width: 32
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b4bffa14e947464db88841eaccd1745
-      internalID: -625725514
+      spriteID: 667d8b250a0e7ff40ac4c4b2b129a146
+      internalID: -703900795
       vertices: []
       indices: 
       edges: []
@@ -267,13 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      chet_0: 1101809129
-      chet_1: -723600017
-      chet_2: 1524339520
-      chet_3: 1681605641
-      chet_4: -940998543
-      chet_5: 1747088012
-      chet_6: -625725514
+      Skill1Boss2-Photoroom_0: 724584613
+      Skill1Boss2-Photoroom_1: 401269264
+      Skill1Boss2-Photoroom_2: -343377909
+      Skill1Boss2-Photoroom_3: -703900795
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
