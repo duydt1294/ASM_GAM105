@@ -1,40 +1,70 @@
+﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-
-
-public class EnemyAttack : MonoBehaviour
+public class KeThuAttack : MonoBehaviour
 {
-    public float attackRange = 2f;
-    public float attackCooldown = 1f;
-    private float lastAttackTime = 0f;
+    private Animator animator;
+    private bool isAttacking = false; // Biến kiểm soát trạng thái tấn công
 
-    public int damage = 10;
+    public float attackRange = 4f; // Phạm vi tấn công
+    public float attackCooldown = 1f; // Thời gian cooldown giữa các lần tấn công
+    private float lastAttackTime = 0f; // Thời điểm tấn công cuối cùng
+
+    private Transform player; // Lưu vị trí người chơi
+
+    public int damage = 10; // Sát thương tấn công
+
+    void Start()
+    {
+        animator = GetComponent<Animator>(); // Lấy Animator từ đối tượng
+        player = GameObject.FindGameObjectWithTag("Player").transform; // Lấy Transform của người chơi
+    }
 
     void Update()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-
         if (player != null)
         {
-            float distance = Vector3.Distance(transform.position, player.transform.position);
+            // Tính khoảng cách giữa kẻ thù và người chơi
+            float distance = Vector3.Distance(transform.position, player.position);
 
-            if (distance <= attackRange && Time.time >= lastAttackTime + attackCooldown)
+            // Kiểm tra nếu kẻ thù ở trong phạm vi tấn công và có đủ thời gian cooldown
+            if (distance <= attackRange && Time.time >= lastAttackTime + attackCooldown && !isAttacking)
             {
-                Attack(player);
-                lastAttackTime = Time.time;
+                isAttacking = true; // Đặt trạng thái tấn công
+                animator.SetTrigger("Attack"); // Kích hoạt animation tấn công
+                lastAttackTime = Time.time; // Ghi lại thời gian tấn công
+                StartCoroutine(AttackDelay()); // Gọi Coroutine để reset lại trạng thái tấn công sau một thời gian
             }
         }
     }
 
-    void Attack(GameObject player)
+    // Coroutine để reset trạng thái tấn công sau khi animation kết thúc
+    private IEnumerator AttackDelay()
     {
-        Debug.Log("Enemy Attack Player!");
-        PlayerHealth health = player.GetComponent<PlayerHealth>();
-        if (health != null)
+        yield return new WaitForSeconds(0.8f); // Thời gian animation tấn công (có thể thay đổi)
+        isAttacking = false; // Reset lại trạng thái tấn công
+    }
+
+    // Hàm tấn công khi animation tấn công kết thúc
+    void OnAttack()
+    {
+        // Kiểm tra nếu người chơi trong phạm vi tấn công
+        if (Vector3.Distance(transform.position, player.position) <= attackRange)
         {
-            health.TakeDamage(damage);
+            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damage); // Gây sát thương cho người chơi
+                Debug.Log("Kẻ thù tấn công người chơi! Gây " + damage + " sát thương.");
+            }
         }
     }
+
+    // Hiển thị phạm vi tấn công trong Scene view (chỉ để debug)
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange); // Vẽ phạm vi tấn công
+    }
 }
+
