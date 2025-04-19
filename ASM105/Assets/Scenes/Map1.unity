@@ -13681,13 +13681,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quai2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1260506290871124030, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
+      propertyPath: patrolRange
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2216479056463455601, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -148.21939
+      value: -148.61
       objectReference: {fileID: 0}
     - target: {fileID: 2216479056463455601, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3664541
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 2216479056463455601, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13720,6 +13724,10 @@ PrefabInstance:
     - target: {fileID: 2216479056463455601, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335177736464725708, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
+      propertyPath: m_Mass
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18405,6 +18413,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8698980630636955588, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19254,7 +19266,7 @@ Transform:
   m_GameObject: {fileID: 1071035422}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.13, y: 1.2, z: -10}
+  m_LocalPosition: {x: -5.6, y: 1.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -129898,6 +129910,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quai2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1260506290871124030, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
+      propertyPath: patrolRange
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2216479056463455601, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -42.76552
@@ -129937,6 +129953,10 @@ PrefabInstance:
     - target: {fileID: 2216479056463455601, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698980630636955588, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -130936,7 +130956,7 @@ Transform:
   m_GameObject: {fileID: 6755333527685417804}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.13, y: 1.2, z: 0}
+  m_LocalPosition: {x: -5.6, y: 1.6, z: 0}
   m_LocalScale: {x: 0.3034, y: 0.3034, z: 0.3034}
   m_ConstrainProportionsScale: 0
   m_Children: []
