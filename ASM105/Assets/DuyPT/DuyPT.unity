@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178278695888173152, guid: 675ec61ef6c4ce641aff09b23c4ed510, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 696003130048172762, guid: 675ec61ef6c4ce641aff09b23c4ed510, type: 3}
       propertyPath: m_LocalPosition.x
@@ -368,6 +368,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Duy
       objectReference: {fileID: 0}
+    - target: {fileID: 301193772143460352, guid: 355436dec332188409028cb98fc3a835, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8396417095220147760, guid: 355436dec332188409028cb98fc3a835, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1
@@ -424,10 +428,14 @@ PrefabInstance:
       propertyPath: GroundCollider
       value: 
       objectReference: {fileID: 518159843}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615210482556598972, guid: 355436dec332188409028cb98fc3a835, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 299531116120576326, guid: 355436dec332188409028cb98fc3a835, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1797649319}
   m_SourcePrefab: {fileID: 100100000, guid: 355436dec332188409028cb98fc3a835, type: 3}
 --- !u!1001 &1599205183
 PrefabInstance:
@@ -500,6 +508,35 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3888120636980279724, guid: 5654eb74835fc2742ac91f9c1ed9307b, type: 3}
   m_PrefabInstance: {fileID: 1599205183}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1797649311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 299531116120576326, guid: 355436dec332188409028cb98fc3a835, type: 3}
+  m_PrefabInstance: {fileID: 813437708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1797649319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797649311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f7f8a984c11ded4c818676d550cce48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 5
+  JumpForce: 10
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  GroundCollider: {fileID: 0}
+  OnGround: 1
+  matdat: {fileID: 518159842}
+  bulletPrefab: {fileID: 1599205185}
+  firePoint: {fileID: 1599205184}
+  jumpSound: {fileID: 8300000, guid: 9402fec7cef6a7e47b62c97ac7d0ca1e, type: 3}
+  shootSound: {fileID: 8300000, guid: d3ee169b375fd6f448f3807c5dfbf221, type: 3}
 --- !u!1 &1958142726
 GameObject:
   m_ObjectHideFlags: 0

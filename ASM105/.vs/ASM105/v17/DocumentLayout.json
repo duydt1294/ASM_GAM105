@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\HocTap\\Github\\SourceTree\\ASM105\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\hoctap\\github\\sourcetree\\asm105\\assets\\cript\\playerduy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\cript\\playerduy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\HocTap\\Github\\SourceTree\\ASM105\\assets\\player_hoanganh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\player_hoanganh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\HocTap\\Github\\SourceTree\\ASM105\\assets\\cong\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\hoctap\\github\\sourcetree\\asm105\\assets\\cong\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\cong\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Cong\\PlayerHealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:Assets\\Cong\\PlayerHealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AFE292A-9D96-BF2F-1793-5F389F70B177}|Assembly-CSharp.Player.csproj|D:\\HocTap\\Github\\SourceTree\\ASM105\\assets\\cript\\playerduy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AFE292A-9D96-BF2F-1793-5F389F70B177}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\cript\\playerduy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\HocTap\\Github\\SourceTree\\ASM105\\assets\\player_hoanganh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\player_hoanganh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Cong\\PlayerCollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "PlayerHealth.cs",
               "DocumentMoniker": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Cong\\PlayerHealth.cs",
               "RelativeDocumentMoniker": "Assets\\Cong\\PlayerHealth.cs",
@@ -50,17 +50,20 @@
               "IsPinned": true
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "PlayerDuy.cs",
               "DocumentMoniker": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\cript\\PlayerDuy.cs",
               "RelativeDocumentMoniker": "Assets\\cript\\PlayerDuy.cs",
               "ToolTip": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\cript\\PlayerDuy.cs",
               "RelativeToolTip": "Assets\\cript\\PlayerDuy.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAmwHkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwEEAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T09:50:48.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-19T09:50:48.768Z"
             },
             {
               "$type": "Document",
@@ -72,12 +75,11 @@
               "RelativeToolTip": "Assets\\Player.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T06:53:59.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-19T06:53:59.221Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Player_HoangAnh.cs",
               "DocumentMoniker": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Player_HoangAnh.cs",
               "RelativeDocumentMoniker": "Assets\\Player_HoangAnh.cs",
@@ -88,20 +90,17 @@
               "WhenOpened": "2025-04-19T09:54:18.315Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Cong\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Cong\\PlayerMovement.cs",
               "ToolTip": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Cong\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Cong\\PlayerMovement.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAAwJ8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAACIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T12:08:20.698Z"
+              "WhenOpened": "2025-04-12T12:08:20.698Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
