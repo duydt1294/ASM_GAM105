@@ -13682,16 +13682,20 @@ PrefabInstance:
       value: Quai2 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1260506290871124030, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1187658578725974162}
+    - target: {fileID: 1260506290871124030, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
       propertyPath: patrolRange
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2216479056463455601, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -148.61
+      value: -149.58
       objectReference: {fileID: 0}
     - target: {fileID: 2216479056463455601, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.25
+      value: -1.22
       objectReference: {fileID: 0}
     - target: {fileID: 2216479056463455601, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18413,6 +18417,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2669128897358213723, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8698980630636955588, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -19567,6 +19575,16 @@ Tilemap:
   m_GameObject: {fileID: 1225369304}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: 182, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 46
+      m_TileSpriteIndex: 46
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 182, y: -2, z: 0}
     second:
       serializedVersion: 2
@@ -19582,6 +19600,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 40
       m_TileSpriteIndex: 68
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 187, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 45
+      m_TileSpriteIndex: 45
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -20159,9 +20187,9 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 8255d3f3e551ced44938200138cfc8c5, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 959538089a1c25441ad48121718652ad, type: 2}
-  - m_RefCount: 3
+  - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: a1ad9eed8d38cd54789a6bd0b74b7cb2, type: 2}
-  - m_RefCount: 8
+  - m_RefCount: 9
     m_Data: {fileID: 11400000, guid: 66416380634479443a129826c43a4f71, type: 2}
   - m_RefCount: 8
     m_Data: {fileID: 11400000, guid: 05eff4e675311d24d8a89e12ae6cc9f3, type: 2}
@@ -20300,9 +20328,9 @@ Tilemap:
     m_Data: {fileID: 1507161403, guid: c4b3372f9035dbb49adf9e7bfd4cd203, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: -919078659, guid: c4b3372f9035dbb49adf9e7bfd4cd203, type: 3}
-  - m_RefCount: 3
+  - m_RefCount: 4
     m_Data: {fileID: -1878268184, guid: c4b3372f9035dbb49adf9e7bfd4cd203, type: 3}
-  - m_RefCount: 8
+  - m_RefCount: 9
     m_Data: {fileID: 1091702034, guid: c4b3372f9035dbb49adf9e7bfd4cd203, type: 3}
   - m_RefCount: 8
     m_Data: {fileID: 309248887, guid: c4b3372f9035dbb49adf9e7bfd4cd203, type: 3}
@@ -20351,7 +20379,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -2056999762, guid: 908786a69194d77468c730be4efe7f03, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 50
+  - m_RefCount: 52
     m_Data:
       e00: 1
       e01: 0
@@ -20370,7 +20398,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 50
+  - m_RefCount: 52
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -129910,6 +129938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quai2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1260506290871124030, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1187658578725974162}
     - target: {fileID: 1260506290871124030, guid: 83a9ab9b927a84a42927f77c08ac9cd6, type: 3}
       propertyPath: patrolRange
       value: 7

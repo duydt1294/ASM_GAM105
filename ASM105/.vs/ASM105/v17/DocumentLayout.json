@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\gameprojects\\duanxuonglop\\asm105\\assets\\scripts\\playercontrollerl4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrollerl4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\gameprojects\\duanxuonglop\\asm105\\assets\\quai2\\nhansatthuongvachet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\quai2\\nhansatthuongvachet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\GameProjects\\DuAnXuongLop\\ASM105\\assets\\quai2\\nhansatthuongvachet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\quai2\\nhansatthuongvachet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\GameProjects\\DuAnXuongLop\\ASM105\\assets\\scripts\\playercontrollerl4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrollerl4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\GameProjects\\DuAnXuongLop\\ASM105\\assets\\quai2\\dichuyen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,26 +58,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PlayerControllerL4.cs",
               "DocumentMoniker": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Scripts\\PlayerControllerL4.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControllerL4.cs",
               "ToolTip": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Scripts\\PlayerControllerL4.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerControllerL4.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAA2wIEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAUwIEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T07:10:56.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-19T07:10:56.364Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "NhanSatThuongVaChet.cs",
-              "DocumentMoniker": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Quai2\\NhanSatThuongVaCHet.cs",
-              "RelativeDocumentMoniker": "Assets\\Quai2\\NhanSatThuongVaCHet.cs",
-              "ToolTip": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Quai2\\NhanSatThuongVaCHet.cs",
-              "RelativeToolTip": "Assets\\Quai2\\NhanSatThuongVaCHet.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwEoAAAAeAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Quai2\\NhanSatThuongVaChet.cs",
+              "RelativeDocumentMoniker": "Assets\\Quai2\\NhanSatThuongVaChet.cs",
+              "ToolTip": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Quai2\\NhanSatThuongVaChet.cs",
+              "RelativeToolTip": "Assets\\Quai2\\NhanSatThuongVaChet.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAEIAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T10:24:22.848Z",
               "EditorCaption": ""
@@ -92,8 +91,7 @@
               "RelativeToolTip": "Assets\\Quai2\\DiChuyen.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAAwEMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T10:16:11.22Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T10:16:11.22Z"
             },
             {
               "$type": "Document",

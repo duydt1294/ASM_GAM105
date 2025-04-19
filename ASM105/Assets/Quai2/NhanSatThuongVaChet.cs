@@ -66,6 +66,33 @@ public class NhanSatThuongVaChet_Thuan : MonoBehaviour
 		MonoBehaviour attackScript = GetComponent<TanCong_Dang>();
 		if (attackScript != null) attackScript.enabled = false;
 
+		// Tắt trọng lực để không bị rơi
+		Rigidbody2D rb = GetComponent<Rigidbody2D>();
+		if (rb != null)
+		{
+			rb.gravityScale = 0;
+			rb.velocity = Vector2.zero; // dừng chuyển động
+		}
+
+		// Bật isTrigger cho collider của GameObject con "ChanQuai2"
+		Transform chanQuai2 = transform.Find("ChanQuai2");
+		if (chanQuai2 != null)
+		{
+			Collider2D chanCollider = chanQuai2.GetComponent<Collider2D>();
+			if (chanCollider != null)
+			{
+				chanCollider.isTrigger = true;
+			}
+			else
+			{
+				Debug.LogWarning("Không tìm thấy Collider2D trong ChanQuai2!");
+			}
+		}
+		else
+		{
+			Debug.LogWarning("Không tìm thấy GameObject ChanQuai2!");
+		}
+
 		// Phát animation chết
 		if (animator != null)
 		{
