@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,9 +19,9 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal; // Giá trị di chuyển ngang
     private bool isGrounded; // Kiểm tra có đứng trên mặt đất không
     private bool isWallSliding; // Kiểm tra có đang bám tường không
+    private bool isOutWallSliding; // Kiểm tra nhảy ra khỏi tường
     private bool isTouchingWall; // Kiểm tra có chạm vào tường không
     private bool canJump; // Kiểm tra có thể nhảy không
-    private int wallDirection; // Hướng bám tường
 
     void Start()
     {
@@ -30,9 +32,13 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateAnimations()
     {
-        if (isWallSliding)
+        if (isWallSliding && !isOutWallSliding)
         {
             animator.Play("WallSlide"); // Gọi animation bám tường
+        }
+        else if (isOutWallSliding)
+        {
+            animator.Play("OutWallSliding"); // Gọi animation nhảy ra khỏi tường
         }
         else if (rb.velocity.y != 0) // Kiểm tra nếu đang nhảy
         {
@@ -65,8 +71,18 @@ public class PlayerMovement : MonoBehaviour
         // Nhảy khi chạm bất kỳ collider nào
         if (Input.GetButtonDown("Jump") && canJump)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce); // Nhảy lên
-            isWallSliding = false; // Ngừng bám tường khi nhảy
+            if (isWallSliding) // Nếu đang bám tường
+            {
+                isOutWallSliding = true; // Đánh dấu là nhảy ra khỏi tường
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce); // Nhảy lên
+                isWallSliding = false; // Ngừng bám tường khi nhảy
+                StartCoroutine(TransitionToJump()); // Chuyển animation sang nhảy sau khi nhảy ra khỏi tường
+            }
+            else
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce); // Nhảy lên bình thường
+                animator.Play("Jump"); // Gọi animation nhảy ngay lập tức
+            }
         }
 
         // Xoay sprite theo hướng
@@ -131,5 +147,13 @@ public class PlayerMovement : MonoBehaviour
         {
             isTouchingWall = false; // Không còn chạm vào tường
         }
+    }
+
+    // Coroutine để đảm bảo chuyển animation qua Jump sau khi ra khỏi tường
+    private IEnumerator TransitionToJump()
+    {
+        yield return new WaitForSeconds(0.2f); // Giảm thời gian chờ nếu cần thiết
+        animator.Play("Jump"); // Gọi animation nhảy
+        isOutWallSliding = false; // Đặt lại trạng thái nhảy ra khỏi tường
     }
 }
