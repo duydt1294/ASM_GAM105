@@ -3,15 +3,7 @@
   "WorkspaceRootPath": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\GameProjects\\DuAnXuongLop\\ASM105\\assets\\sprites\\map\\map1_sewercanals\\playercontrollerl4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\sprites\\map\\map1_sewercanals\\playercontrollerl4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\GameProjects\\DuAnXuongLop\\ASM105\\assets\\scripts\\testdan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\testdan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\gameprojects\\duanxuonglop\\asm105\\assets\\item\\heal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\GameProjects\\DuAnXuongLop\\ASM105\\assets\\item\\heal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\item\\heal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,12 +11,16 @@
       "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\item\\atkboost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\GameProjects\\DuAnXuongLop\\ASM105\\assets\\quai2\\nhansatthuongvachet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\quai2\\nhansatthuongvachet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\GameProjects\\DuAnXuongLop\\ASM105\\assets\\item\\speedboost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\item\\speedboost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\gameprojects\\duanxuonglop\\asm105\\assets\\scripts\\testdan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\testdan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\gameprojects\\duanxuonglop\\asm105\\assets\\quai2\\nhansatthuongvachet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\quai2\\nhansatthuongvachet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\GameProjects\\DuAnXuongLop\\ASM105\\assets\\quai2\\tancong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,6 +33,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Quai2\\Quai2Controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Quai2\\Quai2Controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\GameProjects\\DuAnXuongLop\\ASM105\\assets\\sprites\\map\\map1_sewercanals\\playercontrollerl4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\sprites\\map\\map1_sewercanals\\playercontrollerl4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,20 +54,45 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TestDan.cs",
+              "DocumentMoniker": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Scripts\\TestDan.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TestDan.cs",
+              "ToolTip": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Scripts\\TestDan.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TestDan.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwA8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T16:24:35.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "NhanSatThuongVaChet.cs",
+              "Title": "NhanSatThuongVaCHet.cs",
               "DocumentMoniker": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Quai2\\NhanSatThuongVaCHet.cs",
               "RelativeDocumentMoniker": "Assets\\Quai2\\NhanSatThuongVaCHet.cs",
               "ToolTip": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Quai2\\NhanSatThuongVaCHet.cs",
               "RelativeToolTip": "Assets\\Quai2\\NhanSatThuongVaCHet.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAswD8AAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T10:24:22.848Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
+              "Title": "TanCong.cs",
+              "DocumentMoniker": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Quai2\\TanCong.cs",
+              "RelativeDocumentMoniker": "Assets\\Quai2\\TanCong.cs",
+              "ToolTip": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Quai2\\TanCong.cs",
+              "RelativeToolTip": "Assets\\Quai2\\TanCong.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T10:16:42.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "DiChuyen.cs",
               "DocumentMoniker": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Quai2\\DiChuyen.cs",
               "RelativeDocumentMoniker": "Assets\\Quai2\\DiChuyen.cs",
@@ -79,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Quai2Controller.cs",
               "DocumentMoniker": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Quai2\\Quai2Controller.cs",
               "RelativeDocumentMoniker": "Assets\\Quai2\\Quai2Controller.cs",
@@ -92,80 +117,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ATKBoost.cs",
               "DocumentMoniker": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Item\\ATKBoost.cs",
               "RelativeDocumentMoniker": "Assets\\Item\\ATKBoost.cs",
               "ToolTip": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Item\\ATKBoost.cs",
               "RelativeToolTip": "Assets\\Item\\ATKBoost.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T03:41:37.122Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "SpeedBoost.cs",
               "DocumentMoniker": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Item\\SpeedBoost.cs",
               "RelativeDocumentMoniker": "Assets\\Item\\SpeedBoost.cs",
               "ToolTip": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Item\\SpeedBoost.cs",
               "RelativeToolTip": "Assets\\Item\\SpeedBoost.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T03:32:11.887Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Heal.cs",
               "DocumentMoniker": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Item\\Heal.cs",
               "RelativeDocumentMoniker": "Assets\\Item\\Heal.cs",
               "ToolTip": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Item\\Heal.cs",
               "RelativeToolTip": "Assets\\Item\\Heal.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAwCsAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T03:23:23.144Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "PlayerControllerL4.cs",
               "DocumentMoniker": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Sprites\\Map\\Map1_SewerCanals\\PlayerControllerL4.cs",
               "RelativeDocumentMoniker": "Assets\\Sprites\\Map\\Map1_SewerCanals\\PlayerControllerL4.cs",
               "ToolTip": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Sprites\\Map\\Map1_SewerCanals\\PlayerControllerL4.cs",
               "RelativeToolTip": "Assets\\Sprites\\Map\\Map1_SewerCanals\\PlayerControllerL4.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAIwGsAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABMAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T07:06:59.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TestDan.cs",
-              "DocumentMoniker": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Scripts\\TestDan.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TestDan.cs",
-              "ToolTip": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Scripts\\TestDan.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TestDan.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T16:24:35.356Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TanCong.cs",
-              "DocumentMoniker": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Quai2\\TanCong.cs",
-              "RelativeDocumentMoniker": "Assets\\Quai2\\TanCong.cs",
-              "ToolTip": "D:\\GameProjects\\DuAnXuongLop\\ASM105\\Assets\\Quai2\\TanCong.cs",
-              "RelativeToolTip": "Assets\\Quai2\\TanCong.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T10:16:42.016Z"
+              "WhenOpened": "2025-04-07T07:06:59.441Z"
             }
           ]
         }
