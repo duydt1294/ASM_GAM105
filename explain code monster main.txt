@@ -1,0 +1,67 @@
+
+using UnityEngine;
+
+public class MainMoveMent : MonoBehaviour
+{
+    public float speed = 2f;
+    private Rigidbody2D rb;
+    private Vector2 moveMent;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        moveMent.x = Input.GetAxis("Horizontal");
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+        {
+            animator.SetInteger("TrangThai", 1);
+        }
+        else
+        {
+            animator.SetInteger("TrangThai", 0);
+        }
+
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            spriteRenderer.flipX = true;
+        }else if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        {
+            spriteRenderer.flipX = false;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + moveMent * speed * Time.fixedDeltaTime);
+        // rb.MovePosition(): Đây là một phương thức của Rigidbody2D (hoặc Rigidbody trong 3D), dùng để thay đổi vị trí của đối tượng vật lý
+        /*rb.position:
+
+        Đây là thuộc tính của Rigidbody2D, trả về vị trí hiện tại của đối tượng vật lý trong không gian 2D (dạng Vector2).
+
+        Khi bạn cộng thêm giá trị vào rb.position, bạn đang thay đổi vị trí của đối tượng. */
+
+        /* moveMent: Đây là một vector (thường là Vector2), đại diện cho hướng và mức độ di chuyển của đối tượng.
+         * Ví dụ, nếu moveMent là (1, 0), thì đối tượng sẽ di chuyển sang phải.
+         * speed: Đây là tốc độ di chuyển của đối tượng. Tốc độ này có thể thay đổi tuỳ theo yêu cầu của bạn.
+         Time.fixedDeltaTime: Đây là thời gian giữa mỗi lần cập nhật trong phương thức
+        FixedUpdate(). Sử dụng Time.fixedDeltaTime đảm bảo rằng sự di chuyển sẽ đồng nhất và
+        không bị ảnh hưởng bởi FPS (số khung hình mỗi giây) của máy tính
+         */
+    }
+    /*Giải thích toàn bộ dòng code:
+    rb.position + moveMent * speed * Time.fixedDeltaTime: Tính toán vị trí mới của đối tượng sau khi áp dụng sự di chuyển. Cụ thể:
+
+    moveMent * speed nhân với tốc độ sẽ quyết định mức độ di chuyển của đối tượng trong mỗi lần cập nhật.
+
+    Sau đó, nhân với Time.fixedDeltaTime để đảm bảo di chuyển mượt mà và đồng nhất trong mọi môi trường máy tính (bất kể FPS cao hay thấp).
+
+    rb.MovePosition(): Áp dụng vị trí mới cho Rigidbody2D, khiến đối tượng di chuyển đến vị trí tính toán từ trên. */
+}
