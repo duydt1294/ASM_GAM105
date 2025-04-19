@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8704017339161989647}
   - component: {fileID: 7697453804803935025}
   m_Layer: 0
-  m_Name: Quai2
+  m_Name: Quai2_Thuan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

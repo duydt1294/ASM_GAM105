@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class NhanSatThuongVaCHet_Thuan : MonoBehaviour
+public class NhanSatThuongVaChet_Thuan : MonoBehaviour
 {
 	public float maxHealth = 50f;
 	[SerializeField] private float currentHealth;

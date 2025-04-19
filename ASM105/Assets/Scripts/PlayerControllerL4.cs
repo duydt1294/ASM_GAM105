@@ -22,9 +22,12 @@ public class PlayerController : MonoBehaviour
 
 	private bool isSpeedBoosted = false;
 	private bool isAttackBoosted = false;
+	private bool isInWater = false;
 
 	private Rigidbody2D rb;
 	private Vector2 movement;
+
+	private Coroutine waterDamageCoroutine;
 
 	void Start()
 	{
@@ -37,7 +40,6 @@ public class PlayerController : MonoBehaviour
 
 	void Update()
 	{
-		// Di chuyển cơ bản
 		movement.x = Input.GetAxisRaw("Horizontal");
 		movement.y = Input.GetAxisRaw("Vertical");
 	}
@@ -47,7 +49,6 @@ public class PlayerController : MonoBehaviour
 		rb.velocity = movement.normalized * moveSpeed;
 	}
 
-	// Hồi máu
 	public void Heal(int amount)
 	{
 		currentHealth += amount;
@@ -56,7 +57,6 @@ public class PlayerController : MonoBehaviour
 		PlayTakeItemSound();
 	}
 
-	// Tăng tốc độ
 	public void ActivateSpeedBoost(float multiplier, float duration)
 	{
 		if (!isSpeedBoosted)
@@ -77,7 +77,6 @@ public class PlayerController : MonoBehaviour
 		Debug.Log("🏃‍♂️ Tốc độ trở lại bình thường: " + moveSpeed);
 	}
 
-	// Tăng sát thương
 	public void ActivateAttackBoost(float multiplier, float duration)
 	{
 		if (!isAttackBoosted)
@@ -98,18 +97,71 @@ public class PlayerController : MonoBehaviour
 		Debug.Log("💪 Sức mạnh trở lại bình thường: " + currentAttack);
 	}
 
-	// Truy cập sức tấn công hiện tại từ nơi khác
 	public float GetCurrentAttack()
 	{
 		return currentAttack;
 	}
 
-	// Phát âm thanh khi nhặt vật phẩm
 	private void PlayTakeItemSound()
 	{
 		if (takeItemSound != null && audioSource != null)
 		{
 			audioSource.PlayOneShot(takeItemSound);
+		}
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.CompareTag("Gai"))
+		{
+			TakeDamage(10);
+			Debug.Log("🩸 Đụng gai! Máu hiện tại: " + currentHealth);
+		}
+
+		if (collision.CompareTag("Water"))
+		{
+			isInWater = true;
+			if (waterDamageCoroutine == null)
+			{
+				waterDamageCoroutine = StartCoroutine(WaterDamageOverTime());
+			}
+		}
+	}
+
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.CompareTag("Water"))
+		{
+			isInWater = false;
+			if (waterDamageCoroutine != null)
+			{
+				StopCoroutine(waterDamageCoroutine);
+				waterDamageCoroutine = null;
+				Debug.Log("🚪 Rời khỏi nước!");
+			}
+		}
+	}
+
+	private IEnumerator WaterDamageOverTime()
+	{
+		Debug.Log("🌊 Ở trong nước → bắt đầu mất máu mỗi giây");
+		while (isInWater)
+		{
+			TakeDamage(5);
+			Debug.Log("🌊 Mất máu do nước → Máu hiện tại: " + currentHealth);
+			yield return new WaitForSeconds(1f);
+		}
+	}
+
+	public void TakeDamage(int damage)
+	{
+		currentHealth -= damage;
+		currentHealth = Mathf.Max(0, currentHealth);
+
+		if (currentHealth <= 0)
+		{
+			Debug.Log("💀 Nhân vật đã chết!");
+			// Thêm hiệu ứng chết, game over tại đây nếu cần
 		}
 	}
 }
