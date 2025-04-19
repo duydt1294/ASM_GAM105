@@ -895,7 +895,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpForce: 10
-  wallSlideSpeed: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
