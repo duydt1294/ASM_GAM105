@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerDuy : MonoBehaviour
 {
     Animator animator;
-    float nhay = 10f;
     bool lat_mat;
     public float MoveSpeed = 5f;
 
@@ -18,7 +17,6 @@ public class Player : MonoBehaviour
 
     Rigidbody2D rb;
     public Transform matdat;
-    bool isGrounded;
     public GameObject bulletPrefab;
     public Transform firePoint;
 

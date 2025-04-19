@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player_HoangAnh : MonoBehaviour
 {
     Animator run;
     float speed = 5f;
