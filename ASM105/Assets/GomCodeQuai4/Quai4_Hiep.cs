@@ -24,11 +24,11 @@ public class Quai4_Hiep : MonoBehaviour
 
         // Ghi chú: Mã dưới đây chỉ để kiểm tra (test) logic giảm máu bằng phím T.
         // Bạn có thể để mã này hoặc xóa nếu không cần test nữa
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Debug.Log("Test sát thương bằng phím T");
-            GiamMau(20);
-        }
+        //if (Input.GetKeyDown(KeyCode.T))
+        //{
+        //    Debug.Log("Test sát thương bằng phím T");
+        //    GiamMau(20);
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

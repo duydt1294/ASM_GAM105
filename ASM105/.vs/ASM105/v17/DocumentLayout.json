@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Quai4_Hiep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Quai4_Hiep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\assets\\gomcodequai4\\quai4_hiep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\gomcodequai4\\quai4_hiep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\fpt\\hk2\\gam105\\asm\\asm105\\assets\\gomcodequai4\\quai4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\gomcodequai4\\quai4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\assets\\boss\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\boss\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\assets\\boss\\shadowcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\boss\\shadowcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\assets\\boss\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\boss\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\assets\\boss\\skill1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\boss\\skill1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\assets\\monster\\monstermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\monster\\monstermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Quai4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Quai4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\EnemyAttack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\EnemyAttack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,52 +38,91 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Quai4.cs",
+              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\GomCodeQuai4\\Quai4.cs",
+              "RelativeDocumentMoniker": "Assets\\GomCodeQuai4\\Quai4.cs",
+              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\GomCodeQuai4\\Quai4.cs",
+              "RelativeToolTip": "Assets\\GomCodeQuai4\\Quai4.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwD8AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T14:32:40.717Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Quai4_Hiep.cs",
-              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Quai4_Hiep.cs",
-              "RelativeDocumentMoniker": "Assets\\Quai4_Hiep.cs",
-              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Quai4_Hiep.cs",
-              "RelativeToolTip": "Assets\\Quai4_Hiep.cs",
+              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\GomCodeQuai4\\Quai4_Hiep.cs",
+              "RelativeDocumentMoniker": "Assets\\GomCodeQuai4\\Quai4_Hiep.cs",
+              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\GomCodeQuai4\\Quai4_Hiep.cs",
+              "RelativeToolTip": "Assets\\GomCodeQuai4\\Quai4_Hiep.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAcwBwAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T12:25:33.604Z"
+              "WhenOpened": "2025-04-20T14:32:03.013Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Quai4.cs",
-              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Quai4.cs",
-              "RelativeDocumentMoniker": "Assets\\Quai4.cs",
-              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Quai4.cs",
-              "RelativeToolTip": "Assets\\Quai4.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAUwFAAAAA1AAAAAAAAAA==",
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Boss\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Boss\\PlayerMovement.cs",
+              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Boss\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Boss\\PlayerMovement.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T12:18:29.944Z"
+              "WhenOpened": "2025-04-20T11:38:49.52Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EnemyAttack.cs",
-              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\EnemyAttack.cs",
-              "RelativeDocumentMoniker": "Assets\\EnemyAttack.cs",
-              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\EnemyAttack.cs",
-              "RelativeToolTip": "Assets\\EnemyAttack.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAUwDcAAAAlAAAAAAAAAA==",
+              "Title": "ShadowCollision.cs",
+              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Boss\\ShadowCollision.cs",
+              "RelativeDocumentMoniker": "Assets\\Boss\\ShadowCollision.cs",
+              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Boss\\ShadowCollision.cs",
+              "RelativeToolTip": "Assets\\Boss\\ShadowCollision.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T10:58:39.835Z"
+              "WhenOpened": "2025-04-20T11:38:47.311Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "PlayerHealth.cs",
+              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Boss\\PlayerHealth.cs",
+              "RelativeDocumentMoniker": "Assets\\Boss\\PlayerHealth.cs",
+              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Boss\\PlayerHealth.cs",
+              "RelativeToolTip": "Assets\\Boss\\PlayerHealth.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T11:38:44.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Skill1.cs",
+              "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Boss\\Skill1.cs",
+              "RelativeDocumentMoniker": "Assets\\Boss\\Skill1.cs",
+              "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Boss\\Skill1.cs",
+              "RelativeToolTip": "Assets\\Boss\\Skill1.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAYwEAAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T11:33:07.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "MonsterMove.cs",
               "DocumentMoniker": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Monster\\MonsterMove.cs",
               "RelativeDocumentMoniker": "Assets\\Monster\\MonsterMove.cs",
               "ToolTip": "D:\\FPT\\HK2\\GAM105\\ASM\\ASM105\\Assets\\Monster\\MonsterMove.cs",
               "RelativeToolTip": "Assets\\Monster\\MonsterMove.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAYwF0AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAYwGcAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T08:21:42.863Z"
             }

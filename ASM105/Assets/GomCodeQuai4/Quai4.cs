@@ -41,27 +41,27 @@ public class Quai4 : MonoBehaviour
         // Sau này:
         // - Kiểm tra khi viên đạn trúng quái.
         // - Gọi GiamMau để trừ máu và phát animation.
-        if (Input.GetKeyDown(KeyCode.T)) // Khi nhấn phím T
-        {   // Mã chỉ để test, thay đổi nếu cần
-            // Giảm máu của quái 4
-            mauhientai -= 30;
-            hpQuai.value = mauhientai;
-            StartCoroutine(chayAnimation());
+        //if (Input.GetKeyDown(KeyCode.T)) // Khi nhấn phím T
+        //{   // Mã chỉ để test, thay đổi nếu cần
+        //    // Giảm máu của quái 4
+        //    mauhientai -= 30;
+        //    hpQuai.value = mauhientai;
+        //    StartCoroutine(chayAnimation());
 
-            // Tác động vào máu của Quai4_Hiep
-            if (quai4Hiep != null)
-            {
-                quai4Hiep.GiamMau(30); // Giảm 30 máu cho Quai4_Hiep
-            }
+        //    // Tác động vào máu của Quai4_Hiep
+        //    if (quai4Hiep != null)
+        //    {
+        //        quai4Hiep.GiamMau(30); // Giảm 30 máu cho Quai4_Hiep
+        //    }
 
-            // Kiểm tra nếu quái chính chết, ẩn thanh máu
-            if (mauhientai <= 0)
-            {
-                hpQuai.gameObject.SetActive(false); // Ẩn thanh slider của quái chính
-                quai4.SetBool("chet", true); // Sử dụng bool "isDead" để chuyển sang animation chết
-                Destroy(gameObject, 1f); // Hủy quái sau khi chết (sau 1s để animation chết hoàn thành)
-            }
-        }
+        //    // Kiểm tra nếu quái chính chết, ẩn thanh máu
+        //    if (mauhientai <= 0)
+        //    {
+        //        hpQuai.gameObject.SetActive(false); // Ẩn thanh slider của quái chính
+        //        quai4.SetBool("chet", true); // Sử dụng bool "isDead" để chuyển sang animation chết
+        //        Destroy(gameObject, 1f); // Hủy quái sau khi chết (sau 1s để animation chết hoàn thành)
+        //    }
+        //}
     }
 
     IEnumerator chayAnimation()
@@ -87,5 +87,30 @@ public class Quai4 : MonoBehaviour
             quai4.SetBool("chet", true); // Sử dụng bool "isDead" để chuyển sang animation chết
             Destroy(gameObject, 1f); // Hủy quái sau khi chết (sau 1s để animation chết hoàn thành)
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("hitbox"))
+        {
+            mauhientai -= 30;
+            hpQuai.value = mauhientai;
+            StartCoroutine(chayAnimation());
+
+            // Tác động vào máu của Quai4_Hiep
+            if (quai4Hiep != null)
+            {
+                quai4Hiep.GiamMau(30); // Giảm 30 máu cho Quai4_Hiep
+            }
+
+            // Kiểm tra nếu quái chính chết, ẩn thanh máu
+            if (mauhientai <= 0)
+            {
+                hpQuai.gameObject.SetActive(false); // Ẩn thanh slider của quái chính
+                quai4.SetBool("chet", true); // Sử dụng bool "isDead" để chuyển sang animation chết
+                Destroy(gameObject, 1f); // Hủy quái sau khi chết (sau 1s để animation chết hoàn thành)
+            }
+        }
+        
     }
 }

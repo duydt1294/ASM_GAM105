@@ -53,6 +53,7 @@ public class MonsterMovement : MonoBehaviour
             else
             {
                 transform.Translate(Vector2.left * speed * Time.deltaTime);
+                //transform.Translate(...) = Di chuyển đối tượng theo hướng cụ thể, dựa trên vị trí hiện tại.
                 if (transform.position.x <= leftLimit)
                 {
                     movingRight = true; // Đổi hướng sang phải

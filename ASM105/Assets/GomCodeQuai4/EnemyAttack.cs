@@ -42,6 +42,7 @@ public class KeThuAttack : MonoBehaviour
     private IEnumerator AttackDelay()
     {
         yield return new WaitForSeconds(0.8f); // Thời gian animation tấn công
+        OnAttack(); // Gọi hàm tấn công tại thời điểm đánh trúng
         isAttacking = false;
         animator.SetBool("isAttacking", false); // Tắt trạng thái tấn công
     }
@@ -49,17 +50,21 @@ public class KeThuAttack : MonoBehaviour
     // Hàm tấn công khi animation tấn công kết thúc
     void OnAttack()
     {
-        // Kiểm tra nếu người chơi trong phạm vi tấn công
         if (Vector3.Distance(transform.position, player.position) <= attackRange)
         {
-            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+            PlayerHealth1 playerHealth = player.GetComponent<PlayerHealth1>();
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(damage); // Gây sát thương cho người chơi
+                playerHealth.TakeDamage(damage);
                 Debug.Log("Kẻ thù tấn công người chơi! Gây " + damage + " sát thương.");
+            }
+            else
+            {
+                Debug.LogWarning("Không tìm thấy component PlayerHealth1 trên người chơi!");
             }
         }
     }
+
 
     // Hiển thị phạm vi tấn công trong Scene view (chỉ để debug)
     void OnDrawGizmosSelected()
