@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     AudioSource Luot;
-    Animator run, chem, luot,trungchieu2;
+    Animator run, chem, luot,trungchieu2,trungchieu1;
     float speed = 5f;
     bool latmat;
     public float lucLuot = 20f;      // lực lướt
@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
         chem = GetComponent<Animator>();
         luot = GetComponent<Animator>();
         trungchieu2 = GetComponent<Animator>();
+        trungchieu1 = GetComponent<Animator>();
         HpHienTai = HpPlayer;
         hp.value = HpHienTai;
         hp.value = HpPlayer;
@@ -158,6 +159,10 @@ public class Player : MonoBehaviour
     }
     IEnumerator TrungChieu1Boss2()
     {
+        trungchieu1.SetBool("trungchieu1", true);
+        yield return new WaitForSeconds(0.3f);
+        trungchieu1.SetBool("trungchieu1", false);
+
         if (dangBiLamCham) yield break; // nếu đang bị làm chậm thì không chạy nữa
 
         dangBiLamCham = true;
