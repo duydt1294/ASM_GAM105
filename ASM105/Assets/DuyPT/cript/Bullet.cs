@@ -20,7 +20,7 @@ public class bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Nếu va chạm với kẻ thù
-        if (collision.gameObject.CompareTag("kethu"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject); // Xóa kẻ thù
             Destroy(gameObject); // Xóa viên đạn

@@ -24,11 +24,18 @@ public class PlayerMovement : MonoBehaviour
     private bool isTouchingWall; // Kiểm tra có chạm vào tường không
     private bool canJump; // Kiểm tra có thể nhảy không
 
+    // Attack-related variables
+    private AudioSource audioSource;
+    public AudioClip shootSound;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // Lấy Rigidbody2D
         animator = GetComponent<Animator>(); // Lấy Animator
         sprite = GetComponent<SpriteRenderer>(); // Lấy SpriteRenderer
+        audioSource = GetComponent<AudioSource>(); // Lấy AudioSource
     }
 
     void Update()
@@ -62,6 +69,12 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        // Kiểm tra tấn công
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Attack(); // Gọi phương thức Attack
+        }
+
         // Xoay sprite theo hướng
         if (horizontal > 0) sprite.flipX = false; // Hướng sang phải
         else if (horizontal < 0) sprite.flipX = true; // Hướng sang trái
@@ -92,7 +105,11 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateAnimations()
     {
-        // Chuyển animation tuỳ theo trạng thái
+        // Không cập nhật animation nếu đang tấn công
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+            return;
+
+        // Chuyển animation tùy theo trạng thái
         if (isWallSliding && !isOutWallSliding)
         {
             animator.Play("WallSlide"); // Gọi animation bám tường
@@ -113,6 +130,42 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.Play("Run"); // Gọi animation chạy
         }
+    }
+
+    void Attack()
+    {
+        // Gọi animation tấn công ngay lập tức
+        animator.Play("Attack"); // Kích hoạt animation tấn công
+        Shoot();
+
+        // Kiểm tra nếu shootSound không phải là null trước khi phát âm thanh
+        if (shootSound != null)
+        {
+            audioSource.PlayOneShot(shootSound);
+        }
+        else
+        {
+            Debug.LogWarning("shootSound is not assigned!"); // Cảnh báo nếu âm thanh chưa được gán
+        }
+
+        // Bắt đầu coroutine để quay lại trạng thái Idle
+        StartCoroutine(ResetToIdleAfterAttack());
+    }
+
+    private IEnumerator ResetToIdleAfterAttack()
+    {
+        // Đợi một khoảng thời gian cho animation tấn công hoàn thành
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        // Quay lại trạng thái Idle
+        animator.Play("Idle");
+    }
+
+    void Shoot()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        float direction = sprite.flipX ? -1f : 1f; // Xác định hướng bắn
+        bullet.GetComponent<bullet>().SetDirection(direction);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
