@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\ASS_GAM105\\ASM105\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\ass_gam105\\asm105\\assets\\cript\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\cript\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\ASS_GAM105\\ASM105\\assets\\cript\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\cript\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,38 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Player.cs",
-              "DocumentMoniker": "D:\\ASS_GAM105\\ASM105\\Assets\\cript\\Player.cs",
-              "RelativeDocumentMoniker": "Assets\\cript\\Player.cs",
-              "ToolTip": "D:\\ASS_GAM105\\ASM105\\Assets\\cript\\Player.cs",
-              "RelativeToolTip": "Assets\\cript\\Player.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAMwEoAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T15:27:19.261Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Bullet.cs",
-              "DocumentMoniker": "D:\\ASS_GAM105\\ASM105\\Assets\\cript\\Bullet.cs",
-              "RelativeDocumentMoniker": "Assets\\cript\\Bullet.cs",
-              "ToolTip": "D:\\ASS_GAM105\\ASM105\\Assets\\cript\\Bullet.cs",
-              "RelativeToolTip": "Assets\\cript\\Bullet.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBgAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T15:27:26.467Z",
-              "EditorCaption": ""
             }
           ]
         }
