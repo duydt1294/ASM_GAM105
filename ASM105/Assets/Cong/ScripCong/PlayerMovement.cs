@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && !isDashing) // Kiểm tra lướt
+        if (Input.GetKeyDown(KeyCode.F) && !isDashing && !isWallSliding) // Kiểm tra lướt
         {
 
             StartCoroutine(Dash());
@@ -214,6 +214,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator Dash()
     {
         isDashing = true;
+        isWallSliding = false;
         float originalGravityScale = rb.gravityScale;
         rb.gravityScale = 0;
 
