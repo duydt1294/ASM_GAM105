@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement; // Thêm dòng này
 
 public class PlayerHealth_Cong : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class PlayerHealth_Cong : MonoBehaviour
     [SerializeField] private AudioClip takeDamageSound; // Âm thanh khi player chịu sát thương
     [SerializeField] private AudioClip deathSound; // Âm thanh khi player chết
     public int damage = 1; // Lượng sát thương từ kẻ thù
+
+    [Header("Load Scene")]
+    [SerializeField] private string sceneToLoad; // Tên scene cần load
 
     void Start()
     {
@@ -84,6 +88,11 @@ public class PlayerHealth_Cong : MonoBehaviour
 
     private void Die()
     {
+        StartCoroutine(DieCoroutine()); // Gọi coroutine để xử lý cái chết
+    }
+
+    private IEnumerator DieCoroutine()
+    {
         // Phát âm thanh chết
         if (deathSound != null)
         {
@@ -92,7 +101,10 @@ public class PlayerHealth_Cong : MonoBehaviour
 
         Debug.Log("Player has died!"); // Log khi player chết
 
-        // Tắt player đi hoặc vô hiệu hóa điều khiển
-        gameObject.SetActive(false); // Ẩn gameObject player
+        // Chờ 3 giây trước khi load scene khác
+        yield return new WaitForSeconds(3f);
+
+        // Load scene mới
+        SceneManager.LoadScene(sceneToLoad); // Load scene theo tên đã chỉ định
     }
 }

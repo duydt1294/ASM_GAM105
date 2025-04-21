@@ -927,6 +927,8 @@ MonoBehaviour:
   moveSpeed: 5
   jumpForce: 12
   TimeOutWall: 0
+  dashDistance: 10
+  dashDuration: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -938,7 +940,7 @@ MonoBehaviour:
   runSound: {fileID: 8300000, guid: 635da22c6aa848c498a62964c5dd86fb, type: 3}
   bulletPrefab: {fileID: 3888120636980279724, guid: 5654eb74835fc2742ac91f9c1ed9307b, type: 3}
   firePoint: {fileID: 1545667282}
-  damage: 1
+  dashSound: {fileID: 8300000, guid: dc1d42746a37c6b43a81224e2432612c, type: 3}
 --- !u!95 &2003978703
 Animator:
   serializedVersion: 5
@@ -1106,12 +1108,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44cc9f49e86aaf45a00c247ffcc5f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 1
   currentHealth: 0
   invincibilityDuration: 3
   takeDamageSound: {fileID: 8300000, guid: d4b59e291a879cd45a2f51c3c21c1905, type: 3}
   deathSound: {fileID: 8300000, guid: bd174aeefa3bcdb4b8b02dcc4114894d, type: 3}
   damage: 1
+  sceneToLoad: Cong
 --- !u!82 &2003978706
 AudioSource:
   m_ObjectHideFlags: 0

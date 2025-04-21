@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f; // Tốc độ di chuyển
     [SerializeField] private float jumpForce = 12f; // Lực nhảy
     [SerializeField] private float TimeOutWall;
+    [SerializeField] private float dashDistance = 10f; // Khoảng cách lướt
+    [SerializeField] private float dashDuration = 0.2f; // Thời gian lướt
 
     [Header("Kiểm tra va chạm")]
     [SerializeField] private LayerMask groundLayer; // Layer cho mặt đất
@@ -23,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isOutWallSliding; // Kiểm tra nhảy ra khỏi tường
     private bool isTouchingWall; // Kiểm tra có chạm vào tường không
     private bool canJump; // Kiểm tra có thể nhảy không
+    private bool isDashing; // Kiểm tra có đang lướt không
 
     // Attack-related variables
     private AudioSource audioSource;
@@ -31,8 +34,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioClip runSound; // Âm thanh chạy
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firePoint;
+    [SerializeField] private AudioClip dashSound; // Âm thanh lướt
 
-    [SerializeField] private int damage = 1; // Lượng sát thương từ kẻ thù
 
     private bool isRunning; // Kiểm tra có đang chạy không
 
@@ -46,6 +49,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F) && !isDashing) // Kiểm tra lướt
+        {
+
+            StartCoroutine(Dash());
+            return;
+        }
         // Kiểm tra tấn công
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -89,11 +98,6 @@ public class PlayerMovement : MonoBehaviour
                 {
                     audioSource.PlayOneShot(jumpSound);
                 }
-                else
-                {
-                    Debug.LogWarning("jumpSound is not assigned!");
-                }
-
                 StartCoroutine(TransitionToOutWallSliding());
             }
             else
@@ -105,10 +109,6 @@ public class PlayerMovement : MonoBehaviour
                 if (jumpSound != null)
                 {
                     audioSource.PlayOneShot(jumpSound);
-                }
-                else
-                {
-                    Debug.LogWarning("jumpSound is not assigned!");
                 }
             }
         }
@@ -143,22 +143,24 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isWallSliding)
+        if (!isDashing) // Kiểm tra nếu không lướt
         {
-            rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
-        }
+            if (!isWallSliding)
+            {
+                rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
+            }
 
-        if (isWallSliding)
-        {
-            rb.velocity = new Vector2(horizontal * moveSpeed, 0);
-            rb.gravityScale = 0;
-        }
-        else
-        {
-            rb.gravityScale = 1;
+            if (isWallSliding)
+            {
+                rb.velocity = new Vector2(horizontal * moveSpeed, 0);
+                rb.gravityScale = 0;
+            }
+            else
+            {
+                rb.gravityScale = 1;
+            }
         }
     }
-
     void UpdateAnimations()
     {
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack")) return;
@@ -166,6 +168,10 @@ public class PlayerMovement : MonoBehaviour
         if (isWallSliding)
         {
             animator.Play(sprite.flipX ? "WallSlide" : "WallSlide");
+        }
+        else if (isDashing)
+        {
+            animator.Play("Dash");
         }
         else if (isOutWallSliding)
         {
@@ -187,19 +193,6 @@ public class PlayerMovement : MonoBehaviour
     void Attack()
     {
         animator.Play("Attack");
-
-        if (audioSource == null)
-        {
-            Debug.LogError("AudioSource is not assigned!");
-            return;
-        }
-
-        if (shootSound == null)
-        {
-            Debug.LogError("shootSound is not assigned!");
-            return;
-        }
-
         audioSource.PlayOneShot(shootSound);
         Shoot();
         StartCoroutine(ResetToIdleAfterAttack());
@@ -218,16 +211,43 @@ public class PlayerMovement : MonoBehaviour
         bullet.GetComponent<Bullet>().SetDirection(direction);
     }
 
+    private IEnumerator Dash()
+    {
+        isDashing = true;
+        float originalGravityScale = rb.gravityScale;
+        rb.gravityScale = 0;
+
+        PlaySound(dashSound);
+
+        // Determine the dash direction
+        Vector2 dashDirection = sprite.flipX ? Vector2.left : Vector2.right;
+
+        // Apply the dash force
+        rb.velocity = new Vector2(dashDirection.x * dashDistance, rb.velocity.y);
+
+        // Wait for the duration of the dash
+        yield return new WaitForSeconds(dashDuration);
+
+        // Reset the Rigidbody's gravity scale and dashing state
+        rb.gravityScale = originalGravityScale;
+        isDashing = false;
+    }
+    private void PlayJumpSound()
+    {
+        PlaySound(jumpSound);
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+    }
+
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Kiểm tra nếu player va chạm với enemy
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Debug.Log("Player collided with Enemy!");
-            GetComponent<PlayerHealth_Cong>().TakeDamage(damage); // Gọi hàm TakeDamage
-        }
-
         // Cập nhật trạng thái va chạm với groundLayer và wallLayer
         if (((1 << collision.gameObject.layer) & groundLayer) != 0)
         {
@@ -278,4 +298,5 @@ public class PlayerMovement : MonoBehaviour
         animator.Play("Jump");
         isOutWallSliding = false;
     }
+
 }
