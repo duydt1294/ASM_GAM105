@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:ASM105/Assets/Cong/Animation/55565c5c9fab2cf575ba-Photoroom.png.meta
 guid: b5dda7043b20ece44a209d76ef557474
-========
-guid: 335a8abcbeac4dc4195c86d15bf04bb2
->>>>>>>> origin/anhnh:ASM105/Assets/AnhvsAnimation/AnhDuAn/Quai3/chet.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -38,12 +34,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -52,11 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<<< HEAD:ASM105/Assets/Cong/Animation/55565c5c9fab2cf575ba-Photoroom.png.meta
   spritePixelsToUnits: 100
-========
-  spritePixelsToUnits: 13
->>>>>>>> origin/anhnh:ASM105/Assets/AnhvsAnimation/AnhDuAn/Quai3/chet.png.meta
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,16 +63,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,7 +110,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:ASM105/Assets/Cong/Animation/55565c5c9fab2cf575ba-Photoroom.png.meta
       name: 55565c5c9fab2cf575ba-Photoroom_0
       rect:
         serializedVersion: 2
@@ -126,14 +117,6 @@ TextureImporter:
         y: 483
         width: 249
         height: 321
-========
-      name: chet_0
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 16
-        width: 16
-        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,136 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c341b14dd4985e47b0aa2dfa9778cbe
-      internalID: 1101809129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chet_1
-      rect:
-        serializedVersion: 2
-        x: 88
-        y: 16
-        width: 15
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5cba75360c0441a4d83f6cfbf23dadc3
-      internalID: -723600017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chet_2
-      rect:
-        serializedVersion: 2
-        x: 149
-        y: 16
-        width: 16
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 738282561d72fcd4690871c543a1715e
-      internalID: 1524339520
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chet_3
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 16
-        width: 18
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8e07f5809548c04782a0203d83d8887
-      internalID: 1681605641
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chet_4
-      rect:
-        serializedVersion: 2
-        x: 275
-        y: 16
-        width: 18
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a20e5cc6d40b5194896a0f49e8409572
-      internalID: -940998543
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chet_5
-      rect:
-        serializedVersion: 2
-        x: 333
-        y: 16
-        width: 24
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b2d17014bf4d464fa992c26ff5d5957
-      internalID: 1747088012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chet_6
-      rect:
-        serializedVersion: 2
-        x: 390
-        y: 16
-        width: 32
-        height: 15
->>>>>>>> origin/anhnh:ASM105/Assets/AnhvsAnimation/AnhDuAn/Quai3/chet.png.meta
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<<< HEAD:ASM105/Assets/Cong/Animation/55565c5c9fab2cf575ba-Photoroom.png.meta
-      spriteID: a3661e4f12397ab438dfe213c7187bc5
-      internalID: 1616041048
+      spriteID: 9c23c9ae735e2d74da850c8719d0d630
+      internalID: -1499669542
       vertices: []
       indices: 
       edges: []
@@ -284,14 +139,14 @@ TextureImporter:
         width: 269
         height: 338
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a874797c9b50ff45b597d503d9e1b37
-      internalID: -463154331
+      spriteID: ed3ff76648ba86c458aee072176d6413
+      internalID: -791231710
       vertices: []
       indices: 
       edges: []
@@ -305,14 +160,14 @@ TextureImporter:
         width: 244
         height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8be5a8114790f14597a2832b8a0e021
-      internalID: 973283085
+      spriteID: d5f250198d006b342aadeb34b6cb37c0
+      internalID: -373034008
       vertices: []
       indices: 
       edges: []
@@ -326,14 +181,14 @@ TextureImporter:
         width: 250
         height: 335
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df22b8303299d2b4f8f344308c7bf736
-      internalID: -1385358383
+      spriteID: c5e8bfc6789b7274286ff937c00c992f
+      internalID: -1164636475
       vertices: []
       indices: 
       edges: []
@@ -347,14 +202,14 @@ TextureImporter:
         width: 282
         height: 312
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2debbf8cc3803e34b92b99c8fc2687e6
-      internalID: 1963991566
+      spriteID: d89fa0b896412a044b5a7e017c80a8b6
+      internalID: 1289831459
       vertices: []
       indices: 
       edges: []
@@ -368,14 +223,14 @@ TextureImporter:
         width: 262
         height: 307
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5da42547ae38c844c8d25eca785a2a0e
-      internalID: 648266448
+      spriteID: 8f1dbf0b761e5524ca220d261be8b404
+      internalID: 1501086818
       vertices: []
       indices: 
       edges: []
@@ -386,17 +241,17 @@ TextureImporter:
         serializedVersion: 2
         x: 647
         y: 33
-        width: 253
+        width: 262
         height: 363
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0853bd6eb3e118a49830cae2cbe2c441
-      internalID: -1095235262
+      spriteID: 834cabe521e7e7e45bdf774d9de03e82
+      internalID: -1655303726
       vertices: []
       indices: 
       edges: []
@@ -405,23 +260,19 @@ TextureImporter:
       name: 55565c5c9fab2cf575ba-Photoroom_7
       rect:
         serializedVersion: 2
-        x: 905
+        x: 899
         y: 37
-        width: 233
+        width: 239
         height: 330
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aba02c3e613ccd84baeb22f01f598185
-      internalID: 2109666242
-========
-      spriteID: 5b4bffa14e947464db88841eaccd1745
-      internalID: -625725514
->>>>>>>> origin/anhnh:ASM105/Assets/AnhvsAnimation/AnhDuAn/Quai3/chet.png.meta
+      spriteID: 47f0035d2f1a70443a43418fd48a5b3d
+      internalID: -1000005036
       vertices: []
       indices: 
       edges: []
@@ -437,24 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-<<<<<<<< HEAD:ASM105/Assets/Cong/Animation/55565c5c9fab2cf575ba-Photoroom.png.meta
-      55565c5c9fab2cf575ba-Photoroom_0: 1616041048
-      55565c5c9fab2cf575ba-Photoroom_1: -463154331
-      55565c5c9fab2cf575ba-Photoroom_2: 973283085
-      55565c5c9fab2cf575ba-Photoroom_3: -1385358383
-      55565c5c9fab2cf575ba-Photoroom_4: 1963991566
-      55565c5c9fab2cf575ba-Photoroom_5: 648266448
-      55565c5c9fab2cf575ba-Photoroom_6: -1095235262
-      55565c5c9fab2cf575ba-Photoroom_7: 2109666242
-========
-      chet_0: 1101809129
-      chet_1: -723600017
-      chet_2: 1524339520
-      chet_3: 1681605641
-      chet_4: -940998543
-      chet_5: 1747088012
-      chet_6: -625725514
->>>>>>>> origin/anhnh:ASM105/Assets/AnhvsAnimation/AnhDuAn/Quai3/chet.png.meta
+      55565c5c9fab2cf575ba-Photoroom_0: -1499669542
+      55565c5c9fab2cf575ba-Photoroom_1: -791231710
+      55565c5c9fab2cf575ba-Photoroom_2: -373034008
+      55565c5c9fab2cf575ba-Photoroom_3: -1164636475
+      55565c5c9fab2cf575ba-Photoroom_4: 1289831459
+      55565c5c9fab2cf575ba-Photoroom_5: 1501086818
+      55565c5c9fab2cf575ba-Photoroom_6: -1655303726
+      55565c5c9fab2cf575ba-Photoroom_7: -1000005036
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -6,11 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:ASM105/Assets/Cong/Animation/Idle.anim
   m_Name: Idle
-========
-  m_Name: Chieu1
->>>>>>>> origin/anhnh:ASM105/Assets/AnhvsAnimation/AnhDuAn/Boss2/Animation/Chieu1.anim
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -25,33 +21,19 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-<<<<<<<< HEAD:ASM105/Assets/Cong/Animation/Idle.anim
       value: {fileID: 1723093844, guid: c2c239d7e424ea9458359649bd1ae166, type: 3}
-    - time: 0.083333336
+    - time: 0.016666668
       value: {fileID: 125705146, guid: c2c239d7e424ea9458359649bd1ae166, type: 3}
-    - time: 0.16666667
+    - time: 0.033333335
       value: {fileID: -884082714, guid: c2c239d7e424ea9458359649bd1ae166, type: 3}
-    - time: 0.25
+    - time: 0.05
       value: {fileID: 730967523, guid: c2c239d7e424ea9458359649bd1ae166, type: 3}
-========
-      value: {fileID: 724584613, guid: 9d661a107a04e544ca97b1e0afd9fcd3, type: 3}
-    - time: 0.1
-      value: {fileID: 401269264, guid: 9d661a107a04e544ca97b1e0afd9fcd3, type: 3}
-    - time: 0.2
-      value: {fileID: -343377909, guid: 9d661a107a04e544ca97b1e0afd9fcd3, type: 3}
-    - time: 0.3
-      value: {fileID: -703900795, guid: 9d661a107a04e544ca97b1e0afd9fcd3, type: 3}
->>>>>>>> origin/anhnh:ASM105/Assets/AnhvsAnimation/AnhDuAn/Boss2/Animation/Chieu1.anim
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-<<<<<<<< HEAD:ASM105/Assets/Cong/Animation/Idle.anim
-  m_SampleRate: 12
-========
-  m_SampleRate: 10
->>>>>>>> origin/anhnh:ASM105/Assets/AnhvsAnimation/AnhDuAn/Boss2/Animation/Chieu1.anim
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -68,27 +50,16 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-<<<<<<<< HEAD:ASM105/Assets/Cong/Animation/Idle.anim
     - {fileID: 1723093844, guid: c2c239d7e424ea9458359649bd1ae166, type: 3}
     - {fileID: 125705146, guid: c2c239d7e424ea9458359649bd1ae166, type: 3}
     - {fileID: -884082714, guid: c2c239d7e424ea9458359649bd1ae166, type: 3}
     - {fileID: 730967523, guid: c2c239d7e424ea9458359649bd1ae166, type: 3}
-========
-    - {fileID: 724584613, guid: 9d661a107a04e544ca97b1e0afd9fcd3, type: 3}
-    - {fileID: 401269264, guid: 9d661a107a04e544ca97b1e0afd9fcd3, type: 3}
-    - {fileID: -343377909, guid: 9d661a107a04e544ca97b1e0afd9fcd3, type: 3}
-    - {fileID: -703900795, guid: 9d661a107a04e544ca97b1e0afd9fcd3, type: 3}
->>>>>>>> origin/anhnh:ASM105/Assets/AnhvsAnimation/AnhDuAn/Boss2/Animation/Chieu1.anim
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-<<<<<<<< HEAD:ASM105/Assets/Cong/Animation/Idle.anim
-    m_StopTime: 0.33333334
-========
-    m_StopTime: 0.4
->>>>>>>> origin/anhnh:ASM105/Assets/AnhvsAnimation/AnhDuAn/Boss2/Animation/Chieu1.anim
+    m_StopTime: 0.06666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
