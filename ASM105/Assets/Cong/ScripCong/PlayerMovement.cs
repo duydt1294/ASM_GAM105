@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && !isDashing) // Kiểm tra lướt
+        if (Input.GetKeyDown(KeyCode.F) && !isDashing && !isTouchingWall) // Kiểm tra lướt
         {
 
             StartCoroutine(Dash());
