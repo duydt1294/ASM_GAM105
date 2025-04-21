@@ -1,29 +1,28 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHealth_Cong : MonoBehaviour
 {
     [Header("Sức khỏe")]
-    [SerializeField] private int maxHealth = 5;
-    [SerializeField] private int currentHealth;
+    [SerializeField] private int maxHealth = 5; // Máu tối đa của player
+    [SerializeField] private int currentHealth; // Máu hiện tại của player
 
     private bool isInvincible = false; // Trạng thái bất tử
-    [SerializeField] private float invincibilityDuration = 3f;
+    [SerializeField] private float invincibilityDuration = 3f; // Thời gian bất tử
 
-    private SpriteRenderer spriteRenderer;
-    private AudioSource audioSource;
+    private SpriteRenderer spriteRenderer; // Sprite của player
+    private AudioSource audioSource; // Âm thanh của player
 
     [Header("Âm thanh")]
-    [SerializeField] private AudioClip takeDamageSound; // Âm thanh chịu sát thương
-    [SerializeField] private AudioClip deathSound; // Âm thanh chết
-    public int damage = 1; // Lượng sát thương mà kẻ thù gây ra
+    [SerializeField] private AudioClip takeDamageSound; // Âm thanh khi player chịu sát thương
+    [SerializeField] private AudioClip deathSound; // Âm thanh khi player chết
+    public int damage = 1; // Lượng sát thương từ kẻ thù
 
     void Start()
     {
-        currentHealth = maxHealth;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        audioSource = GetComponent<AudioSource>();
+        currentHealth = maxHealth; // Khởi tạo máu player bằng máu tối đa
+        spriteRenderer = GetComponent<SpriteRenderer>(); // Lấy component SpriteRenderer của player
+        audioSource = GetComponent<AudioSource>(); // Lấy component AudioSource của player
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -38,38 +37,48 @@ public class PlayerHealth_Cong : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (isInvincible) return;
+        if (isInvincible) return; // Nếu đang trong trạng thái bất tử thì không trừ máu
 
-        currentHealth -= damage;
+        currentHealth -= damage; // Trừ máu player
 
-        // Phát âm thanh chịu sát thương
-        if (takeDamageSound != null)
-        {
-            audioSource.PlayOneShot(takeDamageSound);
-        }
+        // Phát âm thanh khi chịu sát thương
+        PlayTakeDamageSound();
 
-        StartCoroutine(InvincibilityCoroutine());
-
+        // Kiểm tra nếu máu còn lại <= 0 thì player chết
         if (currentHealth <= 0)
         {
             Die();
+        }
+        else
+        {
+            // Nếu còn máu, bắt đầu trạng thái bất tử và nhấp nháy sprite
+            StartCoroutine(InvincibilityCoroutine());
+        }
+    }
+
+    private void PlayTakeDamageSound()
+    {
+        if (takeDamageSound != null)
+        {
+            audioSource.PlayOneShot(takeDamageSound); // Phát âm thanh chịu sát thương
         }
     }
 
     private IEnumerator InvincibilityCoroutine()
     {
-        isInvincible = true;
+        isInvincible = true; // Đặt trạng thái bất tử
 
         float elapsed = 0f;
         while (elapsed < invincibilityDuration)
         {
-            spriteRenderer.enabled = false;
-            yield return new WaitForSeconds(0.1f);
-            spriteRenderer.enabled = true;
-            yield return new WaitForSeconds(0.1f);
-            elapsed += 0.2f;
+            // Nhấp nháy sprite của player
+            spriteRenderer.enabled = !spriteRenderer.enabled;
+            yield return new WaitForSeconds(0.1f); // Thời gian nhấp nháy
+            elapsed += 0.1f;
         }
 
+        // Sau khi hết thời gian bất tử, tắt trạng thái bất tử
+        spriteRenderer.enabled = true; // Đảm bảo sprite không bị ẩn
         isInvincible = false;
     }
 
@@ -78,12 +87,12 @@ public class PlayerHealth_Cong : MonoBehaviour
         // Phát âm thanh chết
         if (deathSound != null)
         {
-            audioSource.PlayOneShot(deathSound);
+            audioSource.PlayOneShot(deathSound); // Phát âm thanh khi player chết
         }
 
-        Debug.Log("Player has died!");
+        Debug.Log("Player has died!"); // Log khi player chết
 
-        // Ẩn player hoặc vô hiệu hóa điều khiển
-        gameObject.SetActive(false);
+        // Tắt player đi hoặc vô hiệu hóa điều khiển
+        gameObject.SetActive(false); // Ẩn gameObject player
     }
 }

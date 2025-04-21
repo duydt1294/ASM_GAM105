@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firePoint;
 
+    [SerializeField] private int damage = 1; // Lượng sát thương từ kẻ thù
+
     private bool isRunning; // Kiểm tra có đang chạy không
 
     void Start()
@@ -216,8 +218,17 @@ public class PlayerMovement : MonoBehaviour
         bullet.GetComponent<Bullet>().SetDirection(direction);
     }
 
+
     void OnCollisionEnter2D(Collision2D collision)
     {
+        // Kiểm tra nếu player va chạm với enemy
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Player collided with Enemy!");
+            GetComponent<PlayerHealth_Cong>().TakeDamage(damage); // Gọi hàm TakeDamage
+        }
+
+        // Cập nhật trạng thái va chạm với groundLayer và wallLayer
         if (((1 << collision.gameObject.layer) & groundLayer) != 0)
         {
             isGrounded = true;
@@ -230,7 +241,6 @@ public class PlayerMovement : MonoBehaviour
             canJump = true;
         }
     }
-
     void OnCollisionStay2D(Collision2D collision)
     {
         if (((1 << collision.gameObject.layer) & groundLayer) != 0)
