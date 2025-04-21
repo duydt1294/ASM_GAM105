@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // Kiểm tra tấn công
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             Attack();
             return; // Ngăn không cho tiếp tục xử lý các logic khác
