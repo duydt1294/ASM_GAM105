@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement; // Thêm dòng này
 
@@ -7,7 +8,7 @@ public class PlayerHealth_Cong : MonoBehaviour
     [Header("Sức khỏe")]
     [SerializeField] private int maxHealth = 5; // Máu tối đa của player
     [SerializeField] private int currentHealth; // Máu hiện tại của player
-
+                                    
     private bool isInvincible = false; // Trạng thái bất tử
     [SerializeField] private float invincibilityDuration = 3f; // Thời gian bất tử
 

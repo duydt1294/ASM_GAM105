@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "D:\\HocTap\\Github\\SourceTree\\ASM105\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\HocTap\\Github\\SourceTree\\ASM105\\assets\\cong\\scripcong\\playerhealth_cong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\HocTap\\Github\\SourceTree\\ASM105\\assets\\cong\\scripcong\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\cong\\scripcong\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\hoctap\\github\\sourcetree\\asm105\\assets\\cong\\scripcong\\playerhealth_cong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\cong\\scripcong\\playerhealth_cong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,19 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PlayerHealth_Cong.cs",
               "DocumentMoniker": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Cong\\ScripCong\\PlayerHealth_Cong.cs",
               "RelativeDocumentMoniker": "Assets\\Cong\\ScripCong\\PlayerHealth_Cong.cs",
               "ToolTip": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Cong\\ScripCong\\PlayerHealth_Cong.cs",
               "RelativeToolTip": "Assets\\Cong\\ScripCong\\PlayerHealth_Cong.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAG0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAowGoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T08:13:32.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Cong\\ScripCong\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Cong\\ScripCong\\PlayerMovement.cs",
+              "ToolTip": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Cong\\ScripCong\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Cong\\ScripCong\\PlayerMovement.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAA1wFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T12:12:26.835Z",
               "EditorCaption": ""
             }
           ]

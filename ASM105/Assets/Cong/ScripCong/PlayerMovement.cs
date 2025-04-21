@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Kiểm tra va chạm")]
     [SerializeField] private LayerMask groundLayer; // Layer cho mặt đất
     [SerializeField] private LayerMask wallLayer; // Layer cho tường
+    private bool isTakingDamage; // Kiểm tra có chịu sát thương không
+
 
     private Rigidbody2D rb; // Rigidbody2D của nhân vật
     private Animator animator; // Animator để điều khiển animation
@@ -51,10 +53,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && !isDashing && !isWallSliding) // Kiểm tra lướt
         {
-
             StartCoroutine(Dash());
             return;
         }
+
         // Kiểm tra tấn công
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -70,14 +72,7 @@ public class PlayerMovement : MonoBehaviour
             isWallSliding = true; // Bắt đầu bám tường ngay lập tức khi chạm vào tường
 
             // Quay hình ảnh vào tường
-            if (horizontal > 0)
-            {
-                sprite.flipX = true;
-            }
-            else if (horizontal < 0)
-            {
-                sprite.flipX = false;
-            }
+            sprite.flipX = horizontal > 0;
         }
         else
         {
@@ -114,29 +109,47 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Xoay sprite theo hướng
-        if (horizontal > 0) sprite.flipX = false;
-        else if (horizontal < 0) sprite.flipX = true;
+        sprite.flipX = horizontal < 0;
 
-        // Gửi trạng thái vào Animator
+        // Cập nhật trạng thái Animator
         UpdateAnimations();
 
-        // Phát âm thanh chạy
+        // Xử lý âm thanh chạy
+        HandleRunningSound();
+    }
+
+    private void HandleRunningSound()
+    {
+        // Nếu đang bị sát thương, dừng âm thanh chạy ngay lập tức
+        if (isTakingDamage)
+        {
+            if (isRunning)
+            {
+                audioSource.Stop();
+                isRunning = false;
+            }
+            return; // Thoát ra để không xử lý chạy nữa
+        }
+
+        // Nếu đang di chuyển và đứng trên mặt đất
         if (Mathf.Abs(horizontal) > 0 && isGrounded)
         {
             if (!isRunning)
             {
-                audioSource.loop = true; // Bật chế độ lặp
-                audioSource.clip = runSound; // Gán âm thanh chạy
-                audioSource.Play(); // Phát âm thanh
-                isRunning = true; // Đánh dấu là đang chạy
+                audioSource.loop = true;
+                audioSource.clip = runSound;
+                audioSource.Play();
+                isRunning = true;
             }
         }
         else
         {
+            // Không di chuyển hoặc không đứng trên mặt đất → ngừng phát âm thanh chạy
             if (isRunning)
             {
-                audioSource.Stop(); // Dừng âm thanh khi không còn chạy
-                isRunning = false; // Đánh dấu là không còn chạy
+                audioSource.loop = false;
+                audioSource.Stop();
+                isRunning = false;
             }
         }
     }
