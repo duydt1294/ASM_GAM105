@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:ASM105/Assets/boss1.anim.meta
 guid: 7b7777361e01cbe41975f54c10cfff3d
+========
+guid: cc043b3b06f4dda44a8bccc42df89d3b
+>>>>>>>> origin/anhnh:ASM105/Assets/AnhvsAnimation/AnhDuAn/Boss1/Animation/Dead.anim.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 7400000
