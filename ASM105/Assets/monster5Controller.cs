@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class monster5Controller : MonoBehaviour
 {
@@ -11,20 +12,24 @@ public class monster5Controller : MonoBehaviour
     [HideInInspector] public Transform playerTransform;
     private bool isChasing = false;
     private bool isAttacking = false;
-
+    private bool isFlipping = false;
+    AudioSource atkSound;
     public float normalSpeed = 2f;
-    public float chaseSpeed = 30f;
+    private float chaseSpeed = 6f;
     public float xoayHuong = -1f;
     public float leftLimit = -5f;
     public float rightLimit = 5f;
     public int HPMod = 100;
     public float attackDistance = 1.5f;
+    private float originalY;
 
     void Start()
     {
+        atkSound = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         currentSpeed = normalSpeed;
         enemyTransform = transform;
+        originalY = transform.position.y;
     }
 
     void Update()
@@ -37,11 +42,16 @@ public class monster5Controller : MonoBehaviour
         }
         else
         {
+            currentSpeed = normalSpeed;
             Vector2 movement = new Vector2(-xoayHuong, 0f);
             transform.Translate(movement * currentSpeed * Time.deltaTime);
             animator.Play("diChuyen");
         }
 
+        // Luôn giữ y cố định
+        Vector3 pos = transform.position;
+        pos.y = originalY;
+        transform.position = pos;
     }
 
     public void PhatHienPlayer()
@@ -51,9 +61,17 @@ public class monster5Controller : MonoBehaviour
         StartCoroutine(phatHienPlayer());
     }
 
+    public void MatDauPlayer()
+    {
+        if (playerTransform != null) playerTransform = null;  // Reset vị trí player
+        currentSpeed = normalSpeed;
+        StartCoroutine(matDauPlayer());
+    }
+
+
     public void TanCongPlayer()
     {
-        if (!isAttacking)
+        if (!isAttacking && HPMod > 0)
         {
             StartCoroutine(chuanBiTanCong());
         }
@@ -74,7 +92,7 @@ public class monster5Controller : MonoBehaviour
         isAttacking = true;
         isWaiting = true;
         animator.Play("attack");
-
+        atkSound.Play();
         yield return new WaitForSeconds(0.5f);
 
         float huong = transform.localScale.x > 0 ? 1 : -1;
@@ -110,21 +128,39 @@ public class monster5Controller : MonoBehaviour
         isWaiting = false;
         isChasing = true;
     }
+    IEnumerator matDauPlayer()
+    {
+        isChasing = false;
+        animator.Play("Idle");
+        isWaiting = true;
+        yield return new WaitForSeconds(1.5f);
+        FlipVeXoayHuong();
+        isWaiting = false;
+    }
+
+
+
 
     void ChasePlayer()
     {
+        if (playerTransform == null || isWaiting || isFlipping || !isChasing) return;
+        transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, chaseSpeed * Time.deltaTime);
+
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
         Vector2 direction = (playerTransform.position - transform.position).normalized;
 
-        //Flip đúng hướng
-        if ((direction.x > 0 && transform.localScale.x < 0) || (direction.x < 0 && transform.localScale.x > 0))
+        float facing = transform.localScale.x > 0 ? 1 : -1;
+        float huongDenPlayer = direction.x > 0 ? 1 : -1;
+
+        if (facing != huongDenPlayer)
         {
-            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            StartCoroutine(FlipDelay());
+            return;
         }
 
         if (distanceToPlayer > attackDistance)
         {
-            transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, currentSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, chaseSpeed * Time.deltaTime);
             animator.Play("diChuyen");
         }
         else
@@ -132,9 +168,30 @@ public class monster5Controller : MonoBehaviour
             TanCongPlayer();
         }
     }
+
+
+
+    IEnumerator FlipDelay()
+    {
+        isFlipping = true;
+
+        // Flip mặt
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+
+        // Đợi 0.2 giây cho mọi thứ ổn định
+        yield return new WaitForSeconds(0.2f);
+
+        isFlipping = false;
+    }
+
+
+
     public void kiemTraSatThuong()
     {
-        if (HPMod > 0) { StartCoroutine(BiTrungDan()); }
+        if (HPMod > 0)
+        {
+            StartCoroutine(BiTrungDan());
+        }
     }
 
     IEnumerator BiTrungDan()
@@ -144,16 +201,18 @@ public class monster5Controller : MonoBehaviour
         HPMod -= 50;
         yield return new WaitForSeconds(0.2f);
         isWaiting = false;
+
         if (HPMod <= 0)
         {
             quaiHetMau();
         }
     }
+
     public void quaiHetMau()
     {
         StartCoroutine(Die());
     }
-    
+
     IEnumerator Die()
     {
         isWaiting = true;
@@ -162,5 +221,16 @@ public class monster5Controller : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void FlipVeXoayHuong()
+    {
+        float facing = transform.localScale.x > 0 ? 1 : -1;
+        if (facing != -xoayHuong)  // -xoayHuong là hướng đang đi
+        {
+            Vector3 scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+        }
+    }
 
 }
+

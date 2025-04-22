@@ -6,6 +6,7 @@ public class groundCheckController : MonoBehaviour
 {
     private monster5Controller controller;
     // Start is called before the first frame update
+   
     void Start()
     {
         controller = GetComponentInParent<monster5Controller>();
@@ -16,6 +17,7 @@ public class groundCheckController : MonoBehaviour
         if (other.CompareTag("matDat"))
         {
             controller.kiemTraMatDat();
+            
         }
     }
 

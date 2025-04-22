@@ -3,7 +3,6 @@ using UnityEngine;
 public class Playercheck : MonoBehaviour
 {
     private monster5Controller controller;
-
     void Start()
     {
         controller = GetComponentInParent<monster5Controller>();
@@ -20,7 +19,7 @@ public class Playercheck : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            controller.PhatHienPlayer();
+            controller.MatDauPlayer();
         }
     }
 }
