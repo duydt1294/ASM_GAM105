@@ -191,6 +191,4 @@ public class Boss2 : MonoBehaviour
 
         dangBanChieu1 = false;
     }
-
-
 }

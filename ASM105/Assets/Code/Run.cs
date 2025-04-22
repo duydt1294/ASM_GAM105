@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Hunter : MonoBehaviour
+public class Run : MonoBehaviour
 {
     // ----------------- CÁC THUỘC TÍNH TUẦN TRA -----------------
     //Lê Hoàng Thái: di chuyển tuần tra, truy đuổi người chơi
@@ -126,7 +126,7 @@ public class Hunter : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            attack.SetBool("Attack",true);
+            attack.SetBool("Attack", true);
         }
     }
     public void OnCollisionExit2D(Collision2D collision)
