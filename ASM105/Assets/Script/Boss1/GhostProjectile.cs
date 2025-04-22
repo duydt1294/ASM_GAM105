@@ -53,7 +53,7 @@ public class GhostProjectile : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Player player = collision.GetComponent<Player>();
+            Player1 player = collision.GetComponent<Player1>();
             if (player != null)
             {
                 player.TakeDamage(damage);
