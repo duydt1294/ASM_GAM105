@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\HocTap\\Github\\SourceTree\\ASM105\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\hoctap\\github\\sourcetree\\asm105\\assets\\test\\playertestcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\test\\playertestcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\HocTap\\Github\\SourceTree\\ASM105\\assets\\cong\\scripcong\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\cong\\scripcong\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\HocTap\\Github\\SourceTree\\ASM105\\assets\\cong\\scripcong\\playerhealth_cong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\cong\\scripcong\\playerhealth_cong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\hoctap\\github\\sourcetree\\asm105\\assets\\cong\\scripcong\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\cong\\scripcong\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Player_HoangAnh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,33 +26,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Cong\\ScripCong\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Cong\\ScripCong\\PlayerMovement.cs",
               "ToolTip": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Cong\\ScripCong\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Cong\\ScripCong\\PlayerMovement.cs",
-              "ViewState": "AgIAAOUAAAAAAAAAAADwvw4BAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAAwGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T06:15:54.639Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlayerTestCode.cs",
-              "DocumentMoniker": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Test\\PlayerTestCode.cs",
-              "RelativeDocumentMoniker": "Assets\\Test\\PlayerTestCode.cs",
-              "ToolTip": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Test\\PlayerTestCode.cs",
-              "RelativeToolTip": "Assets\\Test\\PlayerTestCode.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T08:26:37.014Z",
               "EditorCaption": ""
             },
             {
@@ -67,14 +50,14 @@
               "RelativeDocumentMoniker": "Assets\\Cong\\ScripCong\\PlayerHealth_Cong.cs",
               "ToolTip": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Cong\\ScripCong\\PlayerHealth_Cong.cs",
               "RelativeToolTip": "Assets\\Cong\\ScripCong\\PlayerHealth_Cong.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAwwGIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAqwG0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T08:13:32.292Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Bullet.cs",
               "DocumentMoniker": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Cong\\ScripCong\\Bullet.cs",
               "RelativeDocumentMoniker": "Assets\\Cong\\ScripCong\\Bullet.cs",
@@ -82,11 +65,12 @@
               "RelativeToolTip": "Assets\\Cong\\ScripCong\\Bullet.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T07:09:22.74Z"
+              "WhenOpened": "2025-04-21T07:09:22.74Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Player_HoangAnh.cs",
               "DocumentMoniker": "D:\\HocTap\\Github\\SourceTree\\ASM105\\Assets\\Player_HoangAnh.cs",
               "RelativeDocumentMoniker": "Assets\\Player_HoangAnh.cs",
@@ -94,7 +78,8 @@
               "RelativeToolTip": "Assets\\Player_HoangAnh.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T09:54:18.315Z"
+              "WhenOpened": "2025-04-19T09:54:18.315Z",
+              "EditorCaption": ""
             }
           ]
         }
