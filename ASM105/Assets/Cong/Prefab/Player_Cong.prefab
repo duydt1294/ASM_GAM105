@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44cc9f49e86aaf45a00c247ffcc5f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 5
   currentHealth: 0
   invincibilityDuration: 3
   takeDamageSound: {fileID: 8300000, guid: d4b59e291a879cd45a2f51c3c21c1905, type: 3}

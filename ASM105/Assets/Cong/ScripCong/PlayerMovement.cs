@@ -119,26 +119,6 @@ public class PlayerMovement : MonoBehaviour
 
         // Gửi trạng thái vào Animator
         UpdateAnimations();
-
-        // Phát âm thanh chạy
-        if (Mathf.Abs(horizontal) > 0 && isGrounded)
-        {
-            if (!isRunning)
-            {
-                audioSource.loop = true; // Bật chế độ lặp
-                audioSource.clip = runSound; // Gán âm thanh chạy
-                audioSource.Play(); // Phát âm thanh
-                isRunning = true; // Đánh dấu là đang chạy
-            }
-        }
-        else
-        {
-            if (isRunning)
-            {
-                audioSource.Stop(); // Dừng âm thanh khi không còn chạy
-                isRunning = false; // Đánh dấu là không còn chạy
-            }
-        }
     }
 
     void FixedUpdate()
@@ -208,7 +188,7 @@ public class PlayerMovement : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         float direction = sprite.flipX ? -1f : 1f;
-        bullet.GetComponent<Bullet>().SetDirection(direction);
+        bullet.GetComponent<Bullet_Cong>().SetDirection(direction);
     }
 
     private IEnumerator Dash()
