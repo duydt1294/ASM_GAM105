@@ -226,44 +226,44 @@ public class CPlayerMovement : MonoBehaviour
     }
 
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
         // Cập nhật trạng thái va chạm với groundLayer và wallLayer
-        if (((1 << collision.gameObject.layer) & groundLayer) != 0)
+        if (((1 << collider.gameObject.layer) & groundLayer) != 0)
         {
             isGrounded = true;
             canJump = true;
         }
 
-        if (((1 << collision.gameObject.layer) & wallLayer) != 0)
+        if (((1 << collider.gameObject.layer) & wallLayer) != 0)
         {
             isTouchingWall = true;
             canJump = true;
         }
     }
-    void OnCollisionStay2D(Collision2D collision)
+    void OnTriggerStay2D(Collider2D collider)
     {
-        if (((1 << collision.gameObject.layer) & groundLayer) != 0)
+        if (((1 << collider.gameObject.layer) & groundLayer) != 0)
         {
             canJump = true;
         }
 
-        if (((1 << collision.gameObject.layer) & wallLayer) != 0)
+        if (((1 << collider.gameObject.layer) & wallLayer) != 0)
         {
             isTouchingWall = true;
             canJump = true;
         }
     }
 
-    void OnCollisionExit2D(Collision2D collision)
+    void OnTriggerExit2D(Collider2D collider)
     {
-        if (((1 << collision.gameObject.layer) & groundLayer) != 0)
+        if (((1 << collider.gameObject.layer) & groundLayer) != 0)
         {
             isGrounded = false;
             canJump = false;
         }
 
-        if (((1 << collision.gameObject.layer) & wallLayer) != 0)
+        if (((1 << collider.gameObject.layer) & wallLayer) != 0)
         {
             isTouchingWall = false;
             canJump = false;

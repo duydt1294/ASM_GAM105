@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 241849160}
   - component: {fileID: 241849159}
   - component: {fileID: 241849161}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 1379538471}
   - component: {fileID: 1379538470}
   - component: {fileID: 1379538472}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,7 +644,7 @@ GameObject:
   - component: {fileID: 1979441768}
   - component: {fileID: 1979441767}
   - component: {fileID: 1979441769}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -777,11 +777,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5519163961587175563, guid: 9658db9aee77263468f85009d5dc5f1a, type: 3}
       propertyPath: wallLayer.m_Bits
-      value: 0
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 5519163961587175563, guid: 9658db9aee77263468f85009d5dc5f1a, type: 3}
       propertyPath: groundLayer.m_Bits
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8575502850109159792, guid: 9658db9aee77263468f85009d5dc5f1a, type: 3}
       propertyPath: m_LocalPosition.x

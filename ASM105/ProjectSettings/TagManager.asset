@@ -7,14 +7,18 @@ TagManager:
   - Heal
   - Bullet
   - Water
+  - Enemy
+  - chieu2Boss2
+  - chieu1Boss2
+  - hitbox
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
+  - Wall
   - 
   - 
   - 
