@@ -41,7 +41,7 @@ public class BossController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         currentHealth = maxHealth;
-        hpSlider.value = currentHealth;
+        //hpSlider.value = currentHealth;
         baseSpeed = patrolSpeed;
 
         InvokeRepeating(nameof(Shoot), 0f, shootInterval);

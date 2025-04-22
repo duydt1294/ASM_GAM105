@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     AudioSource Luot;
-    Animator run, chem, luot,trungchieu2;
+    Animator run, chem, luot,trungchieu2,trungchieu1;
     float speed = 5f;
     bool latmat;
     public float lucLuot = 20f;      // lực lướt
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     [SerializeField] Slider hp;
     Vector3 huongLuot;
     bool biKhongChe = false; // Không thể di chuyển khi true
-
+    bool dangBiLamCham = false;
 
 
 
@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
         chem = GetComponent<Animator>();
         luot = GetComponent<Animator>();
         trungchieu2 = GetComponent<Animator>();
+        trungchieu1 = GetComponent<Animator>();
         HpHienTai = HpPlayer;
         hp.value = HpHienTai;
         hp.value = HpPlayer;
@@ -122,23 +123,27 @@ public class Player : MonoBehaviour
         nv.x *= -1;
         transform.localScale = nv;
     }
-    
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag.Equals("Enemy"))
-        {
-            HpHienTai -= 10;
-            hp.value = HpHienTai;
-        }
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("chieu2"))
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            HpHienTai -= 5;
+            hp.value = HpHienTai;
+        } 
+
+        if (collision.gameObject.CompareTag("chieu2Boss2")) // Trúng chiêu 2 của boss 2
         {
             HpHienTai -= 10;
             hp.value = HpHienTai;
             StartCoroutine(TrungChieuBoss2());
-        }   
+        }
+
+        if (collision.gameObject.CompareTag("chieu1Boss2")) // trúng chiêu 1 của boss 1
+        {
+            HpHienTai -= 10;
+            hp.value = HpHienTai;
+            StartCoroutine(TrungChieu1Boss2());
+        }
     }
     IEnumerator TrungChieuBoss2() // Bị trúng chiêu 2 của Boss nuốt vào bụng
     {
@@ -152,4 +157,19 @@ public class Player : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = true; // hiện lại Player
         biKhongChe = false; // bỏ vô hiệu hóa để người chơi có thể điều khiển thằng Player lại
     }
+    IEnumerator TrungChieu1Boss2()
+    {
+        trungchieu1.SetBool("trungchieu1", true);
+        yield return new WaitForSeconds(0.3f);
+        trungchieu1.SetBool("trungchieu1", false);
+
+        if (dangBiLamCham) yield break; // nếu đang bị làm chậm thì không chạy nữa
+
+        dangBiLamCham = true;
+        float tocDoGoc = speed;
+        speed = tocDoGoc - 2.5f; // giảm tốc độ
+        yield return new WaitForSeconds(1f);
+        speed = tocDoGoc; // trả lại tốc độ ban đầu
+        dangBiLamCham = false;
+    } 
 }
