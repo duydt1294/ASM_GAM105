@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class CPlayerMovement : MonoBehaviour
 {
     [Header("Di chuyển")]
     [SerializeField] private float moveSpeed = 5f; // Tốc độ di chuyển
