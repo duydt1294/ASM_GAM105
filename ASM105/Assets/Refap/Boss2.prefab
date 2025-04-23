@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 8514273451025663926}
   - component: {fileID: 5789795693014904515}
   m_Layer: 0
-  m_Name: Boss2_H0angAnh
+  m_Name: Boss2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
