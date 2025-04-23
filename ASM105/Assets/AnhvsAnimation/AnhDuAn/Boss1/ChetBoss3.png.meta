@@ -1,0 +1,297 @@
+fileFormatVersion: 2
+guid: b6bde3cca8bb2cb4293e6868d938e690
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 35
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChetBoss3_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 276
+        width: 150
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d6232511772e74388750c5a8f20093
+      internalID: -874982165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChetBoss3_1
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 249
+        width: 150
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b1d80fefe381642a161105b164a40f
+      internalID: 1296879048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChetBoss3_2
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 224
+        width: 157
+        height: 176
+      alignment: 9
+      pivot: {x: 0.48512182, y: 0.34958372}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe42eb16d690b14a8453d6e96671542
+      internalID: 1549470767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChetBoss3_13
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 23
+        width: 163
+        height: 181
+      alignment: 9
+      pivot: {x: 0.4904463, y: 0.3580407}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae0370254e80a4d41ac7f1f7a0c3ee10
+      internalID: -1922676311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChetBoss3_15
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 23
+        width: 157
+        height: 176
+      alignment: 9
+      pivot: {x: 0.46503595, y: 0.3887708}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d811fa123e1664649823deed1a7ed5cd
+      internalID: 554895854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChetBoss3_35
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 22
+        width: 160
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b7f9912af8307498c1feaf54921acd
+      internalID: -112899858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ChetBoss3_0: -874982165
+      ChetBoss3_1: 1296879048
+      ChetBoss3_10: -1903641056
+      ChetBoss3_11: -62395458
+      ChetBoss3_12: -1561998500
+      ChetBoss3_13: -1922676311
+      ChetBoss3_14: -18599477
+      ChetBoss3_15: 554895854
+      ChetBoss3_16: -1393712904
+      ChetBoss3_17: -1452662888
+      ChetBoss3_18: 936081692
+      ChetBoss3_19: -136812366
+      ChetBoss3_2: 1549470767
+      ChetBoss3_20: 1411955854
+      ChetBoss3_21: 164282082
+      ChetBoss3_22: 1212343988
+      ChetBoss3_23: 1009674314
+      ChetBoss3_24: 205693826
+      ChetBoss3_25: -1214490825
+      ChetBoss3_26: 1041194973
+      ChetBoss3_27: 819120636
+      ChetBoss3_28: -450387529
+      ChetBoss3_29: -649878360
+      ChetBoss3_3: -1448246021
+      ChetBoss3_30: -1267670313
+      ChetBoss3_31: -1380179664
+      ChetBoss3_32: 499817713
+      ChetBoss3_33: -1892920651
+      ChetBoss3_34: 187485530
+      ChetBoss3_35: -112899858
+      ChetBoss3_36: -841236851
+      ChetBoss3_37: -944096596
+      ChetBoss3_38: -172227661
+      ChetBoss3_39: -567060065
+      ChetBoss3_4: 486048653
+      ChetBoss3_40: 1597929357
+      ChetBoss3_41: 716558734
+      ChetBoss3_42: -1995382079
+      ChetBoss3_43: 1027106619
+      ChetBoss3_5: -1812150553
+      ChetBoss3_6: -165678859
+      ChetBoss3_7: -145362371
+      ChetBoss3_8: 1543844549
+      ChetBoss3_9: 662308997
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,41 @@
+
+🎮 Game Project Credits
+
+Game Title
+(Tên game – điền vào trong Unity)
+
+Producer & Project Manager
+- Hồ Tấn Đạt
+
+Game Design
+- Hồ Tấn Đạt
+- Trần Anh Thư
+
+Programming
+- Hồ Tấn Đạt
+- Nguyễn Trọng Nghĩa
+
+UI/UX Design
+- Trần Anh Thư
+- Nguyễn Trọng Nghĩa
+
+2D Art & Animation
+- Trần Anh Thư
+
+Sound & Music
+- Hồ Tấn Đạt
+
+Testing & Debugging
+- Nguyễn Trọng Nghĩa
+
+Documentation & Planning
+- Hồ Tấn Đạt
+
+Special Thanks
+- Giảng viên hướng dẫn
+- FPT Polytechnic
+- Unity Community
+- Bạn bè đã góp ý và ủng hộ dự án
+
+Made with Unity
+By Team TAD

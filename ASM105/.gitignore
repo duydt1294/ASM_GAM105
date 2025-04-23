@@ -6,6 +6,7 @@
 [Ll]ogs/
 UserSettings/
 Packages/com.unity.package-manager/ProjectCache/
+.vs
 
 # File cá nhân không nên chia sẻ
 *.csproj
@@ -17,3 +18,4 @@ Packages/com.unity.package-manager/ProjectCache/
 *.vspx
 *.unityproj
 *.tmproj
+*.vsidx
