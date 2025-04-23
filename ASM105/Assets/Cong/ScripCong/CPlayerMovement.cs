@@ -145,7 +145,7 @@ public class CPlayerMovement : MonoBehaviour
     {
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack")) return;
 
-        if (isWallSliding)
+        if (isWallSliding || (isTouchingWall && isGrounded))
         {
             animator.Play("WallSlide");
         }
