@@ -1,0 +1,445 @@
+fileFormatVersion: 2
+guid: de0c8178129c1ea4ab05c922acc36a88
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 120
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: QuaiAttack_0
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 2224
+        width: 106
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ade91601f24af4faf38f0a17ff6471
+      internalID: 1359346524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuaiAttack_1
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 2208
+        width: 109
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474bf1c22cb57b74e8af3b49db413a28
+      internalID: 1968915549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuaiAttack_2
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 2208
+        width: 109
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a1aa60dd3790d4eb36d2afdd66c9c9
+      internalID: -516807234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuaiAttack_3
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 2209
+        width: 108
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0d02a0013bf754e8605fbe4f36f6cb
+      internalID: 838893128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuaiAttack_4
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 2191
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf345990bbf0eea49be9529b2d274516
+      internalID: -1796698117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuaiAttack_5
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1597
+        width: 184
+        height: 98
+      alignment: 9
+      pivot: {x: 0.35794955, y: 0.5133368}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd2128351bbfd34ea8c6009571a7e70
+      internalID: -485013163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuaiAttack_6
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 1598
+        width: 157
+        height: 101
+      alignment: 9
+      pivot: {x: 0.34184468, y: 0.5000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d57eac59088584fbded76e5f046dcc
+      internalID: 1747075430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuaiAttack_7
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 1599
+        width: 180
+        height: 101
+      alignment: 9
+      pivot: {x: 0.29671055, y: 0.51293945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903f865a10116a4468dc2f78db08a882
+      internalID: -1936896825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuaiAttack_8
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 1598
+        width: 183
+        height: 101
+      alignment: 9
+      pivot: {x: 0.30718428, y: 0.5000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a67b8621a797de4aa1f80dbb4479b35
+      internalID: -154828112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuaiAttack_9
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 986
+        width: 184
+        height: 101
+      alignment: 9
+      pivot: {x: 0.35084692, y: 0.51293945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35fd877db6105fe4aaa4873b7c7ae6e9
+      internalID: 24422153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuaiAttack_10
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 986
+        width: 158
+        height: 101
+      alignment: 9
+      pivot: {x: 0.3263032, y: 0.5000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3e45019148fbf4cac23de1e7eee8cc
+      internalID: 2045404593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuaiAttack_11
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 986
+        width: 150
+        height: 101
+      alignment: 9
+      pivot: {x: 0.3606006, y: 0.5000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f08284ed69cebe4da3ecda092ce4b03
+      internalID: 382931470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuaiAttack_12
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 987
+        width: 184
+        height: 101
+      alignment: 9
+      pivot: {x: 0.32954007, y: 0.51293945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f2fa681c8110164ab4430821c748894
+      internalID: 617613730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuaiAttack_15
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 375
+        width: 183
+        height: 101
+      alignment: 9
+      pivot: {x: 0.33976963, y: 0.48292255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca82d8efdecc5e448f91be4c2609bcf
+      internalID: 794630878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      QuaiAttack_0: 1359346524
+      QuaiAttack_1: 1968915549
+      QuaiAttack_10: 2045404593
+      QuaiAttack_11: 382931470
+      QuaiAttack_12: 617613730
+      QuaiAttack_13: -1594510449
+      QuaiAttack_14: 1900499964
+      QuaiAttack_15: 794630878
+      QuaiAttack_16: 1104019169
+      QuaiAttack_17: -1406895292
+      QuaiAttack_18: -221549416
+      QuaiAttack_19: 596470730
+      QuaiAttack_2: -516807234
+      QuaiAttack_20: 1528385131
+      QuaiAttack_21: 1027398668
+      QuaiAttack_22: -597262649
+      QuaiAttack_23: 360396445
+      QuaiAttack_3: 838893128
+      QuaiAttack_4: -1796698117
+      QuaiAttack_5: -485013163
+      QuaiAttack_6: 1747075430
+      QuaiAttack_7: -1936896825
+      QuaiAttack_8: -154828112
+      QuaiAttack_9: 24422153
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
