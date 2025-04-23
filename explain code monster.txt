@@ -1,0 +1,182 @@
+using UnityEngine;
+
+public class MonsterMovement : MonoBehaviour
+{
+    public float speed = 1f; // Tốc độ di chuyển
+    public float leftLimit = 2.21f; // Giới hạn bên trái
+    public float rightLimit = 6.04f; // Giới hạn bên phải
+    private bool movingRight = true; // Hướng di chuyển
+    /*movingRight: Một biến Boolean để kiểm soát hướng di chuyển của quái.
+
+    true: Quái đang di chuyển sang phải.
+
+    false: Quái đang di chuyển sang trái. */
+
+    public float PhamViPhatHienNhanVat = 3f; //Phạm vi mà quái bắt đầu rượt theo nhân vật
+
+
+    private SpriteRenderer spriteRenderer; // Để lật hình quái
+    private Transform player; // Lưu vị trí nhân vật
+
+    void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>(); // Lấy SpriteRenderer từ quái
+        player = GameObject.FindGameObjectWithTag("Player").transform; // tìm nhân vật có tag player
+    }
+
+    void Update()
+    {
+       float KhoangCachToiNhanVat = Vector2.Distance(transform.position, player.position);
+        // Tính khoảng cách giữa quái và nhân vật
+
+        if(KhoangCachToiNhanVat < PhamViPhatHienNhanVat)
+        {
+            DuoiTheoNhanVat();
+        }
+        else
+        {
+            TuanTra();
+        }
+
+        void TuanTra()
+        {
+            // Di chuyển quái
+            if (movingRight)
+            {
+                transform.Translate(Vector2.right * speed * Time.deltaTime);
+                // transform.Translate(): Đây là hàm của Unity được sử dụng để di chuyển đối tượng. 
+                // Vector2.right đại diện cho hướng sang phải trên trục X (tọa độ: (1, 0)).
+                // Time.deltaTime: thời gian thực giữa hai khung hình (frame). Điều này giúp di chuyển mượt mà và không phụ thuộc vào tốc độ xử lý của máy tính. Nếu FPS thấp, quái vẫn di chuyển chính xác.
+                if (transform.position.x >= rightLimit)
+                // transform.position.x: Lấy vị trí hiện tại của quái trên trục X.
+                {
+                    movingRight = false; // Đổi hướng sang trái
+                    FlipSprite(); // Lật hình
+                }
+            }
+            else
+            {
+                transform.Translate(Vector2.left * speed * Time.deltaTime);
+                if (transform.position.x <= leftLimit)
+                {
+                    movingRight = true; // Đổi hướng sang phải
+                    FlipSprite(); // Lật hình
+                }
+            }
+        }
+
+        void DuoiTheoNhanVat()
+        {
+            Vector2 PhuongHuong;
+            if(player.position.x > transform.position.x)
+            // Nếu player.x lớn hơn quái.x → tức là nhân vật đang ở bên phải quái.
+            {
+                PhuongHuong = Vector2.right; // Vậy hướng rượt sẽ là: Vector2.right → đi sang phải.
+
+                if (!movingRight) // Nếu quái đang không nhìn sang phải (đang nhìn trái)
+                {
+                    movingRight = true; // Quay lại hướng phải
+                    FlipSprite(); // Lật sprite để quay mặt qua phải
+                }
+            }
+            else //Nếu player.x < quái.x → quái phải rượt sang trái.
+            {
+                PhuongHuong = Vector2.left;
+                // Vì nhân vật đang ở bên trái (x nhỏ hơn), nên quái phải đi sang trái
+                if (movingRight)  // Nếu quái đang nhìn phải, mà giờ phải quay trái
+                {
+                    movingRight = false;
+                    FlipSprite();
+                }
+            }
+            transform.Translate(PhuongHuong * speed * Time.deltaTime);
+        }
+       
+    }
+
+    // Hàm lật hình quái
+    void FlipSprite()
+    {
+        spriteRenderer.flipX = !spriteRenderer.flipX;
+    }
+
+    void OnDrawGizmosSelected()
+    /*void OnDrawGizmosSelected()
+    Đây là hàm của Unity, sẽ được tự động gọi mỗi khi bạn chọn GameObject (ví dụ con quái) trong cửa sổ Scene.
+
+    Nó KHÔNG chạy trong Game, chỉ để bạn dễ hình dung khi chỉnh scene. */
+    {
+        Gizmos.color = Color.red;
+        /*Gizmos.color = Color.red;
+        Dòng này đặt màu của gizmo sắp được vẽ — ở đây là màu đỏ.
+
+        Gizmos.color là thuộc tính màu cho các hình dạng sẽ được vẽ sau đó */
+        Gizmos.DrawWireSphere(transform.position, PhamViPhatHienNhanVat);
+        /*Gizmos.DrawWireSphere(transform.position, PhamViPhatHienNhanVat);
+        Vẽ một vòng tròn rỗng (wireframe) – giống như một cái "vòng radar".
+
+        transform.position là vị trí hiện tại của quái.
+
+        PhamViPhatHienNhanVat là bán kính của vòng tròn → tức là quái có thể phát hiện nhân vật trong bán kính đó. */
+    }
+
+}
+/* public float PhamViPhatHienNhanVat = 3f;
+
+ * Nghĩa là: quái sẽ rượt theo nhân vật nếu nhân vật cách quái nhỏ hơn 3 đơn vị.
+Trong Unity, khoảng cách được tính theo Vector2 (tọa độ X, Y), và đơn vị này là "world units" – hay có thể hiểu đơn giản như:
+
+1f ≈ 1 ô tile / 1 đơn vị không gian.
+
+Nếu bạn dùng Tilemap, mỗi tile là 1 đơn vị.
+
+Nếu Player cách quái khoảng 3 ô trở xuống → bị phát hiện. */
+
+/*1. float KhoangCachToiNhanVat = Vector2.Distance(transform.position, player.position);
+👉 Mục đích:
+Tính khoảng cách giữa quái và nhân vật để biết:
+
+Nhân vật có đang ở gần quái không?
+
+Có cần rượt theo không?
+
+💬 Phân tích từng phần:
+🔹 transform.position
+Đây là vị trí của quái vật trong thế giới game (tọa độ X, Y).
+
+Ví dụ: quái đang ở (2, 0).
+
+🔹 player.position
+Đây là vị trí của nhân vật.
+
+Ví dụ: nhân vật đang ở (5, 0).
+
+🔹 Vector2.Distance(a, b)
+Hàm có sẵn trong Unity để tính khoảng cách giữa hai điểm a và b.
+
+Trong toán học, nó giống như công thức:
+distance = căn (x2 - x1) bình phương + (y2 - y1) bình phương
+➡️ Trong ví dụ trên:
+Vector2.Distance((2,0), (5,0)) = 3f → tức là nhân vật cách quái 3 đơn vị.
+
+💡 Kết luận:
+Nếu KhoangCachToiNhanVat < PhamViPhatHienNhanVat
+→ Quái thấy nhân vật và bắt đầu đuổi theo!
+  */
+
+/*transform.Translate(...) là gì?
+csharp
+Copy
+Edit
+transform.Translate(PhuongHuong * speed * Time.deltaTime);
+✅ Đây là hàm dùng để di chuyển đối tượng.
+📖 Cấu trúc:
+transform: là cái "vỏ" chứa vị trí, xoay, scale của đối tượng trong Unity.
+
+.Translate(...): là dịch chuyển đối tượng từ vị trí hiện tại.
+
+PhuongHuong: là hướng di chuyển (trái hoặc phải).
+
+speed: tốc độ.
+
+Time.deltaTime: để đảm bảo chuyển động mượt và đúng thời gian (FPS cao hay thấp đều không ảnh hưởng). */
