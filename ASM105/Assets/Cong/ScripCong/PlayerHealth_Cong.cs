@@ -1,53 +1,55 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI; // Thêm dòng này
+using UnityEngine.UI;
 
 public class PlayerHealth_Cong : MonoBehaviour
 {
     [Header("Sức khỏe")]
-    [SerializeField] private int maxHealth = 100; // Máu tối đa của player
-    [SerializeField] private int currentHealth; // Máu hiện tại của player
+    [SerializeField] private int maxHealth = 100;
+    [SerializeField] private int currentHealth;
     [SerializeField] private Slider thanhMau;
 
-    private bool isInvincible = false; // Trạng thái bất tử
-    [SerializeField] private float invincibilityDuration = 3f; // Thời gian bất tử
+    private bool isInvincible = false;
+    [SerializeField] private float invincibilityDuration = 3f;
 
-    private SpriteRenderer spriteRenderer; // Sprite của player
-    private AudioSource audioSource; // Âm thanh của player
+    private SpriteRenderer spriteRenderer;
+    private AudioSource audioSource;
 
     [Header("Âm thanh")]
-    [SerializeField] private AudioClip takeDamageSound; // Âm thanh khi player chịu sát thương
-    [SerializeField] private AudioClip deathSound; // Âm thanh khi player chết
-    public int damage = 5; // Lượng sát thương từ kẻ thù
+    [SerializeField] private AudioClip takeDamageSound;
+    [SerializeField] private AudioClip deathSound;
+    public int damage = 5;
 
     [Header("Load Scene")]
-    [SerializeField] private string sceneToLoad = "EndGame"; // Tên scene cần load
+    [SerializeField] private string sceneToLoad = "EndGame";
 
-    private float cooldownTime = 0.6f; // Thời gian cooldown
-    private float nextActionTime = 0f;
+    private bool isDead = false; // Thêm biến trạng thái
 
     void Start()
     {
-        currentHealth = maxHealth; // Khởi tạo máu player bằng máu tối đa
-        spriteRenderer = GetComponent<SpriteRenderer>(); // Lấy component SpriteRenderer của player
-        audioSource = GetComponent<AudioSource>(); // Lấy component AudioSource của player
+        currentHealth = maxHealth;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Kiểm tra nếu player va chạm với enemy
+        if (isDead) return; // Nếu đã chết, không xử lý va chạm
+
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            TakeDamage(damage); // Trừ máu player
+            TakeDamage(damage);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (isDead) return; // Nếu đã chết, không xử lý va chạm
+
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            TakeDamage(damage); // Trừ máu player
+            TakeDamage(damage);
         }
         if (collision.gameObject.CompareTag("Water"))
         {
@@ -61,22 +63,19 @@ public class PlayerHealth_Cong : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (isInvincible) return; // Nếu đang trong trạng thái bất tử thì không trừ máu
+        if (isInvincible || isDead) return; // Nếu đang bất tử hoặc đã chết thì không trừ máu
 
-        currentHealth -= damage; // Trừ máu player
+        currentHealth -= damage;
         Debug.Log(currentHealth);
 
-        // Phát âm thanh khi chịu sát thương
         PlayTakeDamageSound();
 
-        // Kiểm tra nếu máu còn lại <= 0 thì player chết
         if (currentHealth <= 0)
         {
             Die();
         }
         else
         {
-            // Nếu còn máu, bắt đầu trạng thái bất tử và nhấp nháy sprite
             StartCoroutine(InvincibilityCoroutine());
         }
     }
@@ -85,30 +84,30 @@ public class PlayerHealth_Cong : MonoBehaviour
     {
         if (takeDamageSound != null)
         {
-            audioSource.PlayOneShot(takeDamageSound); // Phát âm thanh chịu sát thương
+            audioSource.PlayOneShot(takeDamageSound);
         }
     }
 
     private IEnumerator InvincibilityCoroutine()
     {
-        isInvincible = true; // Đặt trạng thái bất tử
+        isInvincible = true;
 
         float elapsed = 0f;
         while (elapsed < invincibilityDuration)
         {
-            // Nhấp nháy sprite của player
             spriteRenderer.enabled = !spriteRenderer.enabled;
-            yield return new WaitForSeconds(0.1f); // Thời gian nhấp nháy
+            yield return new WaitForSeconds(0.1f);
             elapsed += 0.1f;
         }
 
-        // Sau khi hết thời gian bất tử, tắt trạng thái bất tử
-        spriteRenderer.enabled = true; // Đảm bảo sprite không bị ẩn
+        spriteRenderer.enabled = true;
         isInvincible = false;
     }
 
     private void Die()
     {
+        if (isDead) return; // Nếu đã chết rồi thì không làm gì thêm
+        isDead = true; // Đặt trạng thái đã chết
         StartCoroutine(DieCoroutine()); // Gọi coroutine để xử lý cái chết
     }
 
@@ -120,17 +119,32 @@ public class PlayerHealth_Cong : MonoBehaviour
             audioSource.PlayOneShot(deathSound); // Phát âm thanh khi player chết
         }
 
-        Debug.Log("Player has died!"); // Log khi player chết
+        Debug.Log("Player has died!");
 
-        // Chờ 3 giây trước khi load scene khác
-        yield return new WaitForSeconds(3f);
+        // Tắt tất cả các script khác của player
+        DisablePlayerScripts();
+
+        // Chờ âm thanh chết phát xong trước khi load scene khác
+        yield return new WaitForSeconds(deathSound.length);
 
         // Load scene mới
-        SceneManager.LoadScene(sceneToLoad); // Load scene theo tên đã chỉ định
+        SceneManager.LoadScene(sceneToLoad);
+    }
+
+    private void DisablePlayerScripts()
+    {
+        // Tìm tất cả các script trên gameObject này và tắt chúng
+        MonoBehaviour[] scripts = GetComponents<MonoBehaviour>();
+        foreach (var script in scripts)
+        {
+            script.enabled = false; // Tắt từng script
+        }
     }
 
     private void Update()
     {
-        thanhMau.value = currentHealth;
+        if (isDead) return; // Nếu đã chết, không thực hiện cập nhật
+
+        thanhMau.value = currentHealth; // Cập nhật thanh máu
     }
 }
