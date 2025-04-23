@@ -31,6 +31,7 @@ public class Run : MonoBehaviour
     // ----------------- KHỞI TẠO -----------------
     void Start()
     {
+        nguoiChoi = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         viTriBatDau = transform.position;      // Ghi lại vị trí ban đầu
         animator = GetComponent<Animator>(); // Lấy Animator từ đối tượng
         attack = GetComponent<Animator>();

@@ -5,14 +5,12 @@ using UnityEngine.UI;
 
 public class quai1 : MonoBehaviour
 {
-    [SerializeField] Slider hp;
     int mautoida = 100;
     int mauhientai;
     Animator quaiBiDanh,chet;
     void Start()
     {
         mauhientai = mautoida;
-        hp.value = mauhientai;
         quaiBiDanh = GetComponent<Animator>();
         chet = GetComponent<Animator>();
     }
@@ -22,10 +20,9 @@ public class quai1 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("hitbox"))
+        if (collision.gameObject.CompareTag("Bullet"))
         {
             mauhientai -= 20;
-            hp.value = mauhientai;
             StartCoroutine(chayAnimation());
 
         }

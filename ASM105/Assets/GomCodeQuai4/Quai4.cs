@@ -42,19 +42,19 @@ public class Quai4 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if (collision.gameObject.CompareTag("Bullet"))
-        //{
-        //    mauhientai -= 1;
-        //    quai4.Play("nhanst");
-        //    //StartCoroutine(chayAnimation());
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            mauhientai -= 30;
+            quai4.Play("nhanst");
+            //StartCoroutine(chayAnimation());
 
-        //    // Kiểm tra nếu quái chính chết, ẩn thanh máu
-        //    if (mauhientai <= 0)
-        //    {
-        //        StartCoroutine(chayAnimation());
-        //         // Sử dụng bool "isDead" để chuyển sang animation chết
-        //        Destroy(gameObject, 1f); // Hủy quái sau khi chết (sau 1s để animation chết hoàn thành)
-        //    }
-        //}    
+            // Kiểm tra nếu quái chính chết, ẩn thanh máu
+            if (mauhientai <= 0)
+            {
+                StartCoroutine(chayAnimation());
+                // Sử dụng bool "isDead" để chuyển sang animation chết
+                Destroy(gameObject, 1f); // Hủy quái sau khi chết (sau 1s để animation chết hoàn thành)
+            }
+        }
     }
 }

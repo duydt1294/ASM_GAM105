@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Thêm dòng này
+using UnityEngine.SceneManagement;
+using UnityEngine.UI; // Thêm dòng này
 
 public class PlayerHealth_Cong : MonoBehaviour
 {
     [Header("Sức khỏe")]
-    [SerializeField] private int maxHealth = 5; // Máu tối đa của player
+    [SerializeField] private int maxHealth = 100; // Máu tối đa của player
     [SerializeField] private int currentHealth; // Máu hiện tại của player
+    [SerializeField] private Slider thanhMau;
 
     private bool isInvincible = false; // Trạng thái bất tử
     [SerializeField] private float invincibilityDuration = 3f; // Thời gian bất tử
@@ -17,16 +19,20 @@ public class PlayerHealth_Cong : MonoBehaviour
     [Header("Âm thanh")]
     [SerializeField] private AudioClip takeDamageSound; // Âm thanh khi player chịu sát thương
     [SerializeField] private AudioClip deathSound; // Âm thanh khi player chết
-    public int damage = 1; // Lượng sát thương từ kẻ thù
+    public int damage = 5; // Lượng sát thương từ kẻ thù
 
     [Header("Load Scene")]
     [SerializeField] private string sceneToLoad; // Tên scene cần load
+
+    private float cooldownTime = 0.6f; // Thời gian cooldown
+    private float nextActionTime = 0f;
 
     void Start()
     {
         currentHealth = maxHealth; // Khởi tạo máu player bằng máu tối đa
         spriteRenderer = GetComponent<SpriteRenderer>(); // Lấy component SpriteRenderer của player
         audioSource = GetComponent<AudioSource>(); // Lấy component AudioSource của player
+        thanhMau.value = currentHealth;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -34,8 +40,19 @@ public class PlayerHealth_Cong : MonoBehaviour
         // Kiểm tra nếu player va chạm với enemy
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Player collided with Enemy!"); // Debug log
             TakeDamage(damage); // Trừ máu player
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage(damage); // Trừ máu player
+        }
+        if (collision.gameObject.CompareTag("Water"))
+        {
+            TakeDamage(100);
         }
     }
 
@@ -44,6 +61,8 @@ public class PlayerHealth_Cong : MonoBehaviour
         if (isInvincible) return; // Nếu đang trong trạng thái bất tử thì không trừ máu
 
         currentHealth -= damage; // Trừ máu player
+        thanhMau.value = currentHealth;
+        Debug.Log(currentHealth);
 
         // Phát âm thanh khi chịu sát thương
         PlayTakeDamageSound();

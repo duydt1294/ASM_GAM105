@@ -12,7 +12,7 @@ public class Hunter : MonoBehaviour
     //PHÁT HIỆN VÀ TẤN CÔNG NGƯỜI CHƠI 
     public Transform nguoiChoi;
     public float tamPhatHien = 5f;
-    public float tocDoTanCong = 2f;
+    public float tocDoTanCong = 0.5f;
     public float khoangDungTanCong = 0.5f;
     public float tocDoKhiTruyDuoi = 5f;
     //QUẢN LÝ MÁU VÀ ANIMATION 
@@ -20,8 +20,11 @@ public class Hunter : MonoBehaviour
     private int currentHealth;
     private Animator animator, tancong, dead;
     private bool daChet = false;
+    public float cooldownTime = 1f; // Thời gian cooldown
+    private float nextActionTime = 0f;
     void Start()
     {
+        nguoiChoi = GameObject.FindGameObjectWithTag("Player").transform;
         viTriBatDau = transform.position;
         animator = GetComponent<Animator>();
         tancong = GetComponent<Animator>();
@@ -53,7 +56,7 @@ public class Hunter : MonoBehaviour
             if (transform.position.x >= viTriBatDau.x + khoangCachDiChuyen)
                 diChuyenSangPhai = false;
 
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
         else
         {
@@ -62,7 +65,7 @@ public class Hunter : MonoBehaviour
             if (transform.position.x <= viTriBatDau.x - khoangCachDiChuyen)
                 diChuyenSangPhai = true;
 
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
     void TanCongNguoiChoi()
@@ -86,9 +89,9 @@ public class Hunter : MonoBehaviour
     void XoayMatVePhiaNguoiChoi()
     {
         if (nguoiChoi.position.x < transform.position.x)
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-        else
             transform.rotation = Quaternion.Euler(0, 0, 0);
+        else
+            transform.rotation = Quaternion.Euler(0, 180, 0);
     }  
     private void OnDrawGizmosSelected()
     {
