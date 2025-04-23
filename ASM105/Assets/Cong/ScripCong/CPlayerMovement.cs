@@ -147,7 +147,7 @@ public class CPlayerMovement : MonoBehaviour
 
         if (isWallSliding)
         {
-            animator.Play(sprite.flipX ? "WallSlide" : "WallSlide");
+            animator.Play("WallSlide");
         }
         else if (isDashing)
         {
@@ -224,6 +224,50 @@ public class CPlayerMovement : MonoBehaviour
             audioSource.PlayOneShot(clip);
         }
     }
+    void OnCollisionEnter2D(Collision2D collison)
+    {
+        // Cập nhật trạng thái va chạm với groundLayer và wallLayer
+        if (((1 << collison.gameObject.layer) & groundLayer) != 0)
+        {
+            isGrounded = true;
+            canJump = true;
+        }
+
+        if (((1 << collison.gameObject.layer) & wallLayer) != 0)
+        {
+            isTouchingWall = true;
+            canJump = true;
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D collison)
+    {
+        if (((1 << collison.gameObject.layer) & groundLayer) != 0)
+        {
+            canJump = true;
+        }
+
+        if (((1 << collison.gameObject.layer) & wallLayer) != 0)
+        {
+            isTouchingWall = true;
+            canJump = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collison)
+    {
+        if (((1 << collison.gameObject.layer) & groundLayer) != 0)
+        {
+            isGrounded = false;
+            canJump = false;
+        }
+
+        if (((1 << collison.gameObject.layer) & wallLayer) != 0)
+        {
+            isTouchingWall = false;
+            canJump = false;
+        }
+    }
 
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -278,5 +322,4 @@ public class CPlayerMovement : MonoBehaviour
         animator.Play("Jump");
         isOutWallSliding = false;
     }
-
 }
