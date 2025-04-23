@@ -158,7 +158,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mautoida: 100
   mauhientai: 0
-  hpQuai: {fileID: 1034831187569101861}
+  quai: {fileID: 0}
+  offset: {x: 0, y: 1.5, z: 0}
 --- !u!1 &3912248842923875794
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,14 +372,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6089471822304799308, guid: f557d74605b4d9c4e8152a1d12d97457, type: 3}
   m_PrefabInstance: {fileID: 6318016338560794066}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1034831187569101861 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6481364970134761975, guid: f557d74605b4d9c4e8152a1d12d97457, type: 3}
-  m_PrefabInstance: {fileID: 6318016338560794066}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

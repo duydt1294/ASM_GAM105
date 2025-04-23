@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Boss2 : MonoBehaviour
@@ -51,9 +52,9 @@ public class Boss2 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collison)
     {
-        if (collison.gameObject.tag.Equals("hitbox"))
+        if (collison.gameObject.tag.Equals("Bullet"))
         {
-            mauHienTai -= 30;
+            mauHienTai -= 2;
             hp.value = mauHienTai;
 
             StartCoroutine(ChayAnimation()); // Gọi hàm IEnumerator bên dưới để Bắt đầu animation
@@ -62,9 +63,14 @@ public class Boss2 : MonoBehaviour
         if (mauHienTai <= 0)
         {
             heochet.SetTrigger("chet");
-            Destroy(gameObject, 2f);
+            //Destroy(gameObject, 3f);
+            Invoke("EndScene", 3f);
         }
+    }
 
+    private void EndScene()
+    {
+        SceneManager.LoadScene("EndGame");
     }
 
     IEnumerator ChayAnimation()

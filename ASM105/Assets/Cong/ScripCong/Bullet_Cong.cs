@@ -22,7 +22,7 @@ public class Bullet_Cong : MonoBehaviour
         // Nếu va chạm với kẻ thù
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(collision.gameObject); // Xóa kẻ thù
+            //Destroy(collision.gameObject); // Xóa kẻ thù
             Destroy(gameObject); // Xóa viên đạn
             return;
         }

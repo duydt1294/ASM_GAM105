@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 4525125873717452811}
   - component: {fileID: 6396469732233145155}
   - component: {fileID: 255050384035691899}
-  - component: {fileID: 7702864916275948984}
   - component: {fileID: 4349575061117895788}
   m_Layer: 0
   m_Name: Quai4DaGomCode
@@ -206,22 +205,6 @@ MonoBehaviour:
   attackRange: 2
   attackCooldown: 1
   damage: 10
---- !u!114 &7702864916275948984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5538859115898238708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f70c32facb401d14d904b3a2c08b6e1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: {fileID: 6481364970134761975, guid: f557d74605b4d9c4e8152a1d12d97457, type: 3}
-  hpHienTai: 0
-  hpToiDa: 100
-  quai4Script: {fileID: 0}
 --- !u!114 &4349575061117895788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,8 +218,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mautoida: 100
-  mauhientai: 0
-  hpQuai: {fileID: 0}
+  mauhientai: 100
   quai: {fileID: 4081606300031979416}
   offset: {x: 0, y: 1, z: 0}
-  quai4Hiep: {fileID: 0}
