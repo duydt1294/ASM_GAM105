@@ -8,7 +8,6 @@ public class Quai3 : MonoBehaviour
 {
     public int mautoida = 100;
     public int mauhientai;
-    [SerializeField] Slider hpQuai;
     Animator quai3, quai3chet;
 
     //hau
@@ -25,7 +24,6 @@ public class Quai3 : MonoBehaviour
     void Start()
     {
         mauhientai = mautoida;
-        hpQuai.value = mauhientai;
         quai3 = GetComponent<Animator>();
         quai3chet = GetComponent<Animator>();
         //hau
@@ -96,10 +94,9 @@ public class Quai3 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("hitbox"))
+        if (collision.gameObject.CompareTag("Bullet"))
         {
             mauhientai -= 35;
-            hpQuai.value = mauhientai;
             StartCoroutine(chayAnimation()); // Gọi hàm IEnumerator bên dưới để Bắt đầu animation
         }
         if (mauhientai <= 0)

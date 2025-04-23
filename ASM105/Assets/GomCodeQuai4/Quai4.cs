@@ -15,7 +15,6 @@ public class Quai4 : MonoBehaviour
     // Thêm offset để thanh máu nằm đúng trên đầu quái
     public Vector3 offset = new Vector3(0, 1.5f, 0); // Điều chỉnh offset cho hợp lý
 
-    private Quai4_Hiep quai4Hiep;  // Tham chiếu tới script Quai4_Hiep
 
     void Start()
     {
@@ -36,39 +35,26 @@ public class Quai4 : MonoBehaviour
 
     IEnumerator chayAnimation()
     {
-        quai4.SetBool("NhanSt", true); // Kích hoạt animation "nhận sát thương"
-        yield return new WaitForSeconds(0.3f); // Đợi 0.3s
-        quai4.SetBool("NhanSt", false); // Tắt animation
-    }
-
-    // Hàm giảm máu cho quái từ bên ngoài (gọi từ Quai4_Hiep)
-    public void GiamMau(int soMau)
-    {
-        mauhientai -= soMau;
-        StartCoroutine(chayAnimation());
-
-        // Kiểm tra nếu quái chính chết, ẩn thanh máu
-        if (mauhientai <= 0)
-        {
-            quai4.SetBool("chet", true); // Sử dụng bool "isDead" để chuyển sang animation chết
-            Destroy(gameObject, 1f); // Hủy quái sau khi chết (sau 1s để animation chết hoàn thành)
-        }
+        quai4.Play("chet");
+        yield return new WaitForSeconds(5f); // Đợi 0.3s
+        //quai4.SetBool("NhanSt", false); // Tắt animation
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            mauhientai -= 30;
-            StartCoroutine(chayAnimation());
+        //if (collision.gameObject.CompareTag("Bullet"))
+        //{
+        //    mauhientai -= 1;
+        //    quai4.Play("nhanst");
+        //    //StartCoroutine(chayAnimation());
 
-            GiamMau(30);
-
-            if (mauhientai <= 0)
-            {
-                quai4.SetBool("chet", true); // Sử dụng bool "isDead" để chuyển sang animation chết
-                Destroy(gameObject, 1f); // Hủy quái sau khi chết (sau 1s để animation chết hoàn thành)
-            }
-        }    
+        //    // Kiểm tra nếu quái chính chết, ẩn thanh máu
+        //    if (mauhientai <= 0)
+        //    {
+        //        StartCoroutine(chayAnimation());
+        //         // Sử dụng bool "isDead" để chuyển sang animation chết
+        //        Destroy(gameObject, 1f); // Hủy quái sau khi chết (sau 1s để animation chết hoàn thành)
+        //    }
+        //}    
     }
 }
