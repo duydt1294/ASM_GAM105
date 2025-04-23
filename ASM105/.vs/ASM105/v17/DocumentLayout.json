@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "D:\\DuAn\\ASM105\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\duan\\asm105\\assets\\bosshealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\bosshealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\duan\\asm105\\assets\\playertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\playertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|d:\\duan\\asm105\\assets\\meteorfly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|D:\\DuAn\\ASM105\\assets\\meteorfly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AF4642B-CCAC-353D-8549-74801D1DF71F}|Assembly-CSharp.csproj|solutionrelative:assets\\meteorfly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -27,6 +31,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BossHealth.cs",
+              "DocumentMoniker": "D:\\DuAn\\ASM105\\Assets\\BossHealth.cs",
+              "RelativeDocumentMoniker": "Assets\\BossHealth.cs",
+              "ToolTip": "D:\\DuAn\\ASM105\\Assets\\BossHealth.cs",
+              "RelativeToolTip": "Assets\\BossHealth.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T23:53:41.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PlayerTest.cs",
               "DocumentMoniker": "D:\\DuAn\\ASM105\\Assets\\PlayerTest.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerTest.cs",
@@ -39,7 +56,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MeteorFly.cs",
               "DocumentMoniker": "D:\\DuAn\\ASM105\\Assets\\MeteorFly.cs",
               "RelativeDocumentMoniker": "Assets\\MeteorFly.cs",
@@ -47,12 +64,11 @@
               "RelativeToolTip": "Assets\\MeteorFly.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T06:10:38.543Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-19T06:10:38.543Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FireAttack.cs",
               "DocumentMoniker": "D:\\DuAn\\ASM105\\Assets\\FireAttack.cs",
               "RelativeDocumentMoniker": "Assets\\FireAttack.cs",
