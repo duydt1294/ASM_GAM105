@@ -10,15 +10,8 @@ public class Heal : MonoBehaviour
 	{
 		if (collision.CompareTag("Player"))
 		{
-			//Tìm script PlayerHealth gắn trên Player
-			PlayerController playerHealth = collision.GetComponent<PlayerController>(); //PlayerController la ten class script cua player
-
-			if (playerHealth != null)
-			{
-				playerHealth.Heal(healAmount); // Tăng máu
-				Destroy(gameObject);
-			}
-		}
+            Destroy(gameObject);
+        }
 	}
 }
 

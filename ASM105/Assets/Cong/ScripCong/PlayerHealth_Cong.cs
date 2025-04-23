@@ -22,7 +22,7 @@ public class PlayerHealth_Cong : MonoBehaviour
     public int damage = 5; // Lượng sát thương từ kẻ thù
 
     [Header("Load Scene")]
-    [SerializeField] private string sceneToLoad; // Tên scene cần load
+    [SerializeField] private string sceneToLoad = "EndGame"; // Tên scene cần load
 
     private float cooldownTime = 0.6f; // Thời gian cooldown
     private float nextActionTime = 0f;
@@ -32,7 +32,6 @@ public class PlayerHealth_Cong : MonoBehaviour
         currentHealth = maxHealth; // Khởi tạo máu player bằng máu tối đa
         spriteRenderer = GetComponent<SpriteRenderer>(); // Lấy component SpriteRenderer của player
         audioSource = GetComponent<AudioSource>(); // Lấy component AudioSource của player
-        thanhMau.value = currentHealth;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -54,6 +53,10 @@ public class PlayerHealth_Cong : MonoBehaviour
         {
             TakeDamage(100);
         }
+        if (collision.gameObject.CompareTag("Heal"))
+        {
+            currentHealth = 100;
+        }
     }
 
     public void TakeDamage(int damage)
@@ -61,7 +64,6 @@ public class PlayerHealth_Cong : MonoBehaviour
         if (isInvincible) return; // Nếu đang trong trạng thái bất tử thì không trừ máu
 
         currentHealth -= damage; // Trừ máu player
-        thanhMau.value = currentHealth;
         Debug.Log(currentHealth);
 
         // Phát âm thanh khi chịu sát thương
@@ -125,5 +127,10 @@ public class PlayerHealth_Cong : MonoBehaviour
 
         // Load scene mới
         SceneManager.LoadScene(sceneToLoad); // Load scene theo tên đã chỉ định
+    }
+
+    private void Update()
+    {
+        thanhMau.value = currentHealth;
     }
 }
