@@ -64,7 +64,7 @@ public class CPlayerMovement : MonoBehaviour
         {
             if (!isDashing) // Kiểm tra nếu không lướt
             {
-                currentMana += 5; // Hồi 5 mana
+                currentMana += 5; // Hồi  mana
             }
             yield return new WaitForSeconds(1f); // Đợi 1 giây trước khi hồi tiếp
         }
@@ -110,7 +110,7 @@ public class CPlayerMovement : MonoBehaviour
         }
 
         // Kiểm tra nhảy ra khỏi tường khi nhấn nút nhảy
-        if (Input.GetButtonDown("Jump") && canJump)
+        if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W)) && canJump)
         {
             if (isWallSliding)
             {
