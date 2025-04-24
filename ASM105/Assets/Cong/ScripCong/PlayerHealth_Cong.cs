@@ -126,7 +126,7 @@ public class PlayerHealth_Cong : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         // Load scene mới
-        SceneManager.LoadScene(sceneToLoad); // Load scene theo tên đã chỉ định
+        SceneManager.LoadScene("GameOver"); // Load scene theo tên đã chỉ định
     }
 
     private void Update()

@@ -105,14 +105,14 @@ public class Quai3 : MonoBehaviour
             Destroy(gameObject, 1f);
         }
     }
-    public void OnCollisionEnter2D(Collision2D collision) // Bắt sự kiện khi va chạm với Player thì sẽ đấm liên tục
-    {
-        tancong.SetBool("Attack", true);
-    }
-    public void OnCollisionExit2D(Collision2D collision) // bắt sự kiện khi thoát va chạm thì sẽ ngừng đấm
-    {
-        tancong.SetBool("Attack", false);
-    }
+    //public void OnCollisionEnter2D(Collision2D collision) // Bắt sự kiện khi va chạm với Player thì sẽ đấm liên tục
+    //{
+    //    tancong.SetBool("Attack", true);
+    //}
+    //public void OnCollisionExit2D(Collision2D collision) // bắt sự kiện khi thoát va chạm thì sẽ ngừng đấm
+    //{
+    //    tancong.SetBool("Attack", false);
+    //}
 
     IEnumerator chayAnimation()
         {
