@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class CPlayerMovement : MonoBehaviour
 {
     [Header("Di chuyển")]
@@ -10,6 +10,12 @@ public class CPlayerMovement : MonoBehaviour
     [SerializeField] private float TimeOutWall;
     [SerializeField] private float dashDistance = 10f; // Khoảng cách lướt
     [SerializeField] private float dashDuration = 0.2f; // Thời gian lướt
+
+    [Header("Mana")]
+    [SerializeField] private int maxMana = 100; // Mana tối đa
+    [SerializeField] private int currentMana; // Mana hiện tại
+    [SerializeField] private int dashCost = 10; // Mana mất khi dash
+    [SerializeField] private Slider manaSlider; // Thanh trượt mana
 
     [Header("Kiểm tra va chạm")]
     [SerializeField] private LayerMask groundLayer; // Layer cho mặt đất
@@ -41,14 +47,33 @@ public class CPlayerMovement : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>(); // Lấy Rigidbody2D
-        animator = GetComponent<Animator>(); // Lấy Animator
-        sprite = GetComponent<SpriteRenderer>(); // Lấy SpriteRenderer
-        audioSource = GetComponent<AudioSource>(); // Lấy AudioSource
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
+
+        currentMana = 50; // Khởi tạo mana
+        manaSlider.maxValue = maxMana; // Đặt giá trị tối đa cho thanh trượt mana
+        manaSlider.value = currentMana; // Đặt giá trị ban đầu cho thanh trượt mana
+        StartCoroutine(RegenerateMana()); // Bắt đầu hồi mana
     }
 
+    private IEnumerator RegenerateMana()
+    {
+        while (currentMana < maxMana) // Tiếp tục cho đến khi đạt maxMana
+        {
+            if (!isDashing) // Kiểm tra nếu không lướt
+            {
+                currentMana += 5; // Hồi 5 mana
+            }
+            yield return new WaitForSeconds(1f); // Đợi 1 giây trước khi hồi tiếp
+        }
+    }
     void Update()
     {
+        // Cập nhật thanh trượt mana
+        manaSlider.value = currentMana;
+
         if (Input.GetKeyDown(KeyCode.F) && !isDashing && !isTouchingWall) // Kiểm tra lướt
         {
 
@@ -193,6 +218,14 @@ public class CPlayerMovement : MonoBehaviour
 
     private IEnumerator Dash()
     {
+        // Kiểm tra đủ mana trước khi thực hiện dash
+        if (currentMana < dashCost)
+        {
+            Debug.Log("Not enough mana to dash!");
+            yield break; // Dừng thực hiện nếu không đủ mana
+        }
+
+        currentMana -= dashCost; // Giảm mana
         isDashing = true;
         float originalGravityScale = rb.gravityScale;
         rb.gravityScale = 0;
