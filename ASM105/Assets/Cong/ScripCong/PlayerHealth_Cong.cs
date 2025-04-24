@@ -128,7 +128,11 @@ public class PlayerHealth_Cong : MonoBehaviour
         yield return new WaitForSeconds(deathSound.length);
 
         // Load scene mới
+<<<<<<< HEAD
         SceneManager.LoadScene(sceneToLoad);
+=======
+        SceneManager.LoadScene("GameOver");
+>>>>>>> merge_dat
     }
 
     private void DisablePlayerScripts()
